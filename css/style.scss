@@ -1,0 +1,22 @@
+/* global style */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+a {
+  outline: none;
+}
+/* header styling start */
+.header {
+    background-color: grey;
+    padding: 20px 15px;
+}
+/* header styling end */
