@@ -1,4 +1,24 @@
-/* global style */
+// ---------------fonts--------------
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+// font-family: 'Baloo Da 2', cursive;
+// font-family: 'Poppins', sans-serif;
+
+/*----------------- global style------------------ */
+// define custom css variables
+:root {
+  --bg-black-900: #000000;
+  --bg-black-100: #dddddd;
+  --bg-black-50: #eff0f4;
+  --text-black-900: #000000;
+  --text-black-700: #555555;
+  --text-black-600: #666666;
+  --text-black-300: #bbbbbb;
+}
+
+*:not(i) {
+  font-family: "Baloo Da 2", cursive;
+  font-weight: 400;
+}
 *,
 ::after,
 ::before {
@@ -13,10 +33,64 @@ body {
 }
 a {
   outline: none;
+  text-decoration: none;
 }
-/* header styling start */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+
+/*-------------------- header styling start----------------------*/
 .header {
-    background-color: grey;
-    padding: 20px 15px;
+  padding: 20px 15px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  & .logo a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 30px;
+    border: 2px solid var(--skin-color);
+    border-radius: 50%;
+    color: var(--skin-color);
+    font-weight: 600;
+  }
+  & .hamburger-btn {
+    height: 40px;
+    width: 40px;
+    box-shadow: 0 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & span {
+      display: block;
+      height: 2px;
+      width: 16px;
+      background-color: var(--bg-black-900);
+    }
+  }
 }
-/* header styling end */
+/*------------ header styling end--------------- */
