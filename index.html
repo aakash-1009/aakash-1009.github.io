@@ -12,27 +12,94 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
     />
+    <!-- -----typed.js------- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
+      integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
+      crossorigin="anonymous"
+    ></script>
     <!-- main css -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- default color skin -->
-    <link rel="stylesheet" href="css/skins/color-1.css">
+    <link rel="stylesheet" href="css/skins/color-1.css" />
   </head>
+
   <body>
-<!-- ************************HEADER START******************* -->
-<header class="header">
-  <div class="container">
-    <div class="row justify-content-between">
-      <div class="logo">
-        <a href="index.html">A</a>
+    <!-- ************************HEADER/HOME START******************* -->
+    <section class="header home" id="home">
+      <!-- ----------------NAV CIRCLE START----------------- -->
+      <div class="container">
+        <div class="circle-container">
+          <div class="circle">
+            <button id="close">
+              <i class="fas fa-times outer-shadow hover-in-shadow"></i>
+            </button>
+            <button id="open">
+              <i class="fas fa-bars outer-shadow hover-in-shadow"></i>
+            </button>
+          </div>
+        </div>
+        <!-- -----------------NAV CIRCLE END------------------ -->
+        <!-- -----------------LOGO START-------------------------- -->
+        <div class="row justify-content-between" id="header-row">
+          <div class="logo">
+            <a href="index.html"> A </a>
+          </div>
+        </div>
       </div>
-      <div class="hamburger-btn"><span></span></div>
-    </div>
-  </div>
+      <!-- -------------------LOGO END-------------------- -->
+      <!-- -----------------------------HOME CONTENT------------------------- -->
+      <div class="home-container container">
+        <div class="row full-screen align-items-center">
+          <div class="home-text">
+            <div class="text-1">Hello, my name is</div>
+            <div class="text-2">Aakash Garg</div>
+            <div class="text-3">And I'm a <span class="typing"></span></div>
+            <a href="#" class="btn-1 hover-in-shadow outer-shadow">More about Me</a>
+          </div>
 
-</header>
+          <div class="home-img inner-shadow">
+            <div class="img-box outer-shadow ">
+              <a id="btn" class="magic outer-shadow "
+                ><span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Click Me!</a
+              >
+              <div id="boxes" class="boxes big"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -------------HEADER/HOME END----------------- -->
 
-<!-- ************************HEADER END******************* -->
-
+    <nav>
+      <ul>
+        <li class="outer-shadow hover-in-shadow active">
+          <a href="#index.html"><i class="fas fa-home"></i> Home </a>
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="#about.html"><i class="fas fa-user-alt"></i> About</a>
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="#skills.html"><i class="fas fa-user-alt"></i> Skills</a>
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="#services.html"><i class="fas fa-user-alt"></i> Services</a>
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="#contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="#testimonials.html"
+            ><i class="fas fa-user-alt"></i> Testimonials</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <footer><p>Created by &copy; Aakash Garg</p></footer>
 
     <!-- main js -->
     <script src="js/main.js"></script>
