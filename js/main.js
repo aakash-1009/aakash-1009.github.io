@@ -33,3 +33,15 @@ function createBoxes() {
 }
 createBoxes();
 // -------------------------home img end-----------------
+// -------------hover animation--------------------
+const letters = document.querySelectorAll("span.blast")
+letters.forEach(item => {
+  item.addEventListener("mouseenter", () => {
+      item.classList.toggle('rubberBand')
+      
+  })
+  item.addEventListener("mouseout", () => {
+      item.classList.toggle('rubberBand')
+      
+  })
+})

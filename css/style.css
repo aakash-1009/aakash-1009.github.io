@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
 /*----------------- global style------------------ */
 :root {
   --bg-black-900: #000000;
@@ -120,7 +120,7 @@ img {
 
 .btn-1 {
   padding: 10px 25px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--skin-color);
   background-color: transparent;
@@ -197,7 +197,8 @@ img {
 }
 
 @-webkit-keyframes topBounce {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -208,7 +209,8 @@ img {
 }
 
 @keyframes topBounce {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -230,7 +232,8 @@ img {
 }
 
 @-webkit-keyframes leftBounce {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -241,7 +244,8 @@ img {
 }
 
 @keyframes leftBounce {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -268,6 +272,80 @@ img {
   opacity: 0.5;
   left: -35px;
   top: -25px;
+}
+
+@-webkit-keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  -webkit-animation: rubberBand 1s infinite;
+          animation: rubberBand 1s infinite;
+  color: var(--skin-color);
+}
+
+.blast {
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 /*-------------------- header styling start----------------------*/
@@ -402,7 +480,7 @@ nav ul {
 }
 
 nav ul li {
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: white;
   margin: 20px 0;
   -webkit-transform: translateX(-100%);
@@ -538,22 +616,37 @@ nav ul li.hover-in-shadow:hover::after {
 }
 
 .text-1 {
-  font-size: 27px;
+  font-size: 30px;
+}
+
+.text-1 span {
+  margin: -3px;
+  font-weight: 600;
 }
 
 .text-2 {
   font-size: 75px;
-  font-weight: 600;
   margin-left: -3px;
+}
+
+.text-2 span {
+  margin: -7px;
+  font-weight: 700;
 }
 
 .text-3 {
   font-size: 40px;
+  color: var(--text-black-700);
 }
 
 .text-3 span {
+  font-weight: 600;
+  margin: -3px;
+}
+
+.text-3 span.typing {
   color: var(--skin-color);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .home-container .home-text .btn-1 {
@@ -598,7 +691,7 @@ nav ul li.hover-in-shadow:hover::after {
 }
 
 .home-container .home-img .img-box a:hover {
-  color: var(--text-black-900);
+  color: white;
   background: var(--skin-color);
   -webkit-box-shadow: 0 0 10px var(--skin-color), 0 0 40px var(--skin-color), 0 0 80px var(--skin-color);
           box-shadow: 0 0 10px var(--skin-color), 0 0 40px var(--skin-color), 0 0 80px var(--skin-color);
