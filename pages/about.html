@@ -13,9 +13,9 @@
       crossorigin="anonymous"
     />
     <!-- main css -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <!-- default color skin -->
-    <link rel="stylesheet" href="css/skins/color-1.css" />
+    <link rel="stylesheet" href="../css/skins/color-1.css" />
   </head>
 
   <body>
@@ -44,41 +44,87 @@
       <!-- -------------------LOGO END-------------------- -->
       <!-- -----------------------------HOME CONTENT------------------------- -->
       <div class="about-container container">
-        <div class="row ">
-            <div class="section-title">
-                <h2 data-heading="main info">About Me</h2>
+        <div class="row">
+          <div class="section-title smoke">
+            <video
+              src="../smoke.mp4"
+              autoplay
+              muted
+              height="120"
+              width="300"
+            ></video>
+            <h2 data-heading="main info" class="smokeText">
+              <span>A</span>
+              <span>B</span>
+              <span>O</span>
+              <span>U</span>
+              <span>T &nbsp;</span>
+              <span>M</span>
+              <span>E</span>
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="about-img">
+            <div class="img-box inner-shadow">
+              <img
+                src="../img/profile-pic-removebg-preview.png"
+                alt="profile-pic"
+                srcset=""
+                class="outer-shadow"
+              />
             </div>
-          
+          </div>
+          <div class="about-info">
+            <p>
+              <span>Hi! My name is Aakash Garg. I am a Web Developer.</span
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur ut exercitationem voluptas reiciendis iste magnam
+              voluptate, dolorum ea. Unde minima eos quo quam! Autem dicta
+              dolores optio itaque! Quidem, inventore! Accusamus assumenda
+              aliquam omnis iste, accusantium rerum porro ratione rem beatae in
+              repellat minima doloremque sequi deleniti iusto error explicabo
+              pariatur qui odit. Error est numquam doloribus, nulla ex animi.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ea,
+              molestias tempore labore non iure? Expedita facere corrupti atque
+              nulla possimus esse beatae! Ullam fugit, a quod magnam qui
+              ratione!
+            </p>
+            <div class="glassBtn">
+              <a href="../cv.pdf" class="">Download CV</a>
+            </div>
+            <div class="glassBtn">
+              <a href="#" class="">Hire Me</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- -------------HEADER/HOME END----------------- -->
-
+    <!-- navlink a not working due to after on a  -->
     <nav>
       <ul>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="../index.html"><i class="fas fa-home"></i> Home </a>
+        </li>
         <li class="outer-shadow hover-in-shadow active">
-          <a href="pages/index.html"><i class="fas fa-home"></i> Home </a>
+          <a href="about.html"><i class="fas fa-user-alt"></i> About</a>
         </li>
         <li class="outer-shadow hover-in-shadow">
-          <a href="pages/about.html"><i class="fas fa-user-alt"></i> About</a>
-        </li>
-        <li class="outer-shadow hover-in-shadow">
-          <a href="pages/services.html"
+          <a href="services.html"
             ><i class="fas fa-concierge-bell"></i> Services</a
           >
         </li>
         <li class="outer-shadow hover-in-shadow">
-          <a href="pages/projects.html"
-            ><i class="fas fa-tasks"></i> Projects</a
-          >
+          <a href="projects.html"><i class="fas fa-tasks"></i> Projects</a>
         </li>
         <li class="outer-shadow hover-in-shadow">
-          <a href="pages/contact.html"
-            ><i class="fas fa-envelope"></i> Contact</a
-          >
+          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
         </li>
         <li class="outer-shadow hover-in-shadow">
-          <a href="#testimonials.html"
+          <a href="testimonials.html"
             ><i class="fas fa-comments"></i>Testimonials</a
           >
         </li>
@@ -87,7 +133,7 @@
     <footer><p>Created by &copy; Aakash Garg</p></footer>
 
     <!-- main js -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
     <!-- style switcher js -->
     <script src="js/style-switcher.js"></script>
   </body>
