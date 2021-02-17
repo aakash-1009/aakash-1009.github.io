@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Personal Portfolio Website</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- default color skin -->
+    <link rel="stylesheet" href="css/skins/color-1.css" />
+  </head>
+
+  <body>
+    <!-- ************************HEADER/ABOUT START******************* -->
+    <section class="header about" id="about">
+      <!-- ----------------NAV CIRCLE START----------------- -->
+      <div class="container">
+        <div class="circle-container">
+          <div class="circle">
+            <button id="close">
+              <i class="fas fa-times outer-shadow hover-in-shadow"></i>
+            </button>
+            <button id="open">
+              <i class="fas fa-bars outer-shadow hover-in-shadow"></i>
+            </button>
+          </div>
+        </div>
+        <!-- -----------------NAV CIRCLE END------------------ -->
+        <!-- -----------------LOGO START-------------------------- -->
+        <div class="row justify-content-between" id="header-row">
+          <div class="logo">
+            <a href="index.html"> A </a>
+          </div>
+        </div>
+      </div>
+      <!-- -------------------LOGO END-------------------- -->
+      <!-- -----------------------------HOME CONTENT------------------------- -->
+      <div class="about-container container">
+        <div class="row ">
+            <div class="section-title">
+                <h2 data-heading="main info">About Me</h2>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- -------------HEADER/HOME END----------------- -->
+
+    <nav>
+      <ul>
+        <li class="outer-shadow hover-in-shadow active">
+          <a href="pages/index.html"><i class="fas fa-home"></i> Home </a>
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="pages/about.html"><i class="fas fa-user-alt"></i> About</a>
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="pages/services.html"
+            ><i class="fas fa-concierge-bell"></i> Services</a
+          >
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="pages/projects.html"
+            ><i class="fas fa-tasks"></i> Projects</a
+          >
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="pages/contact.html"
+            ><i class="fas fa-envelope"></i> Contact</a
+          >
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="#testimonials.html"
+            ><i class="fas fa-comments"></i>Testimonials</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <footer><p>Created by &copy; Aakash Garg</p></footer>
+
+    <!-- main js -->
+    <script src="js/main.js"></script>
+    <!-- style switcher js -->
+    <script src="js/style-switcher.js"></script>
+  </body>
+</html>
