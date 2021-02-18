@@ -8,9 +8,10 @@
   --text-black-700: #555555;
   --text-black-600: #666666;
   --text-black-300: #bbbbbb;
-  --outer-shadow: 2px 2px 3px #d0d0d0, -2px -2px 0 #f8f8f8;
+  --outer-shadow: 2px 2px 3px #d0d0d0, -2px -2px 2px #f8f8f8;
   --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
-  --inner-shadow: inset 2px 2px 3px #d0d0d0, inset -2px -2px 0 #f8f8f8;
+  --inner-shadow: inset 2px 2px 3px #d0d0d0, inset -2px -2px 2px #f8f8f8;
+  --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
 }
 
 *:not(i) {
@@ -1358,7 +1359,8 @@ nav ul li.hover-in-shadow:hover::after {
           transform: skewX(45deg) translateX(-170px);
 }
 
-.about-container .experience, .about-container .education {
+.about-container .experience,
+.about-container .education {
   padding: 50px 0;
 }
 
@@ -1498,7 +1500,7 @@ nav ul li.hover-in-shadow:hover::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 25%;
+  width: 30%;
   height: 400px;
   color: white;
   background: #111;
@@ -1567,6 +1569,7 @@ nav ul li.hover-in-shadow:hover::after {
   position: relative;
   z-index: 10;
   padding: 20px 40px;
+  text-align: center;
 }
 
 .services-container .gradBox .gradBoxContent h2 {
@@ -1579,7 +1582,29 @@ nav ul li.hover-in-shadow:hover::after {
   font-size: 1.1em;
   color: white;
   margin-bottom: 10px;
-  line-height: 1.4em;
+  line-height: 2em;
+}
+
+.services-container .gradBox .gradBoxContent .icon {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin: 10px auto 20px;
+  text-align: center;
+}
+
+.services-container .gradBox .gradBoxContent .icon i {
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.services-container .gradBox .gradBoxContent:hover .icon {
+  -webkit-box-shadow: var(--inner-shadow-0);
+          box-shadow: var(--inner-shadow-0);
+}
+
+.services-container .gradBox .gradBoxContent:hover i {
+  font-size: 35px;
 }
 
 footer p {

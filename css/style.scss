@@ -13,10 +13,10 @@
   --text-black-700: #555555;
   --text-black-600: #666666;
   --text-black-300: #bbbbbb;
-  --outer-shadow: 2px 2px 3px #d0d0d0, -2px -2px 0 #f8f8f8;
+  --outer-shadow: 2px 2px 3px #d0d0d0, -2px -2px 2px #f8f8f8;
   --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
-  // --outer-shadow-0: 0 0 0 red, -0 -0 -0 red;
-  --inner-shadow: inset 2px 2px 3px #d0d0d0, inset -2px -2px 0 #f8f8f8;
+  --inner-shadow: inset 2px 2px 3px #d0d0d0, inset -2px -2px 2px #f8f8f8;
+  --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
 }
 
 *:not(i) {
@@ -266,12 +266,12 @@ img {
     transform: translateX(25px);
   }
 }
-@keyframes fadeInTop{
-  0%{
+@keyframes fadeInTop {
+  0% {
     opacity: 0;
     transform: translateY(-25px);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0px);
   }
@@ -940,7 +940,7 @@ nav {
     max-width: 100%;
     display: none;
 
-    &.active{
+    &.active {
       display: block;
       animation: fadeInTop 0.7s ease;
     }
@@ -1001,7 +1001,8 @@ nav {
       }
     }
   }
-  .experience,.education {
+  .experience,
+  .education {
     padding: 50px 0;
   }
   .timeline {
@@ -1104,22 +1105,22 @@ nav {
 
 // ----------------About styling end----------------
 //-----------------service styling start------------------
-.services-container{
+.services-container {
   padding: 50px 0;
   min-height: 100vh;
 
-  .gradContainer{
+  .gradContainer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
   }
-  
+
   .gradBox {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: 30%;
     height: 400px;
     color: white;
     background: #111;
@@ -1183,17 +1184,35 @@ nav {
       position: relative;
       z-index: 10;
       padding: 20px 40px;
-      
-      h2{
+      text-align: center;
+
+      h2 {
         font-size: 2em;
         color: white;
         margin-bottom: 10px;
       }
-      p{
+      p {
         font-size: 1.1em;
         color: white;
         margin-bottom: 10px;
-        line-height: 1.4em;
+        line-height: 2em;
+      }
+      .icon {
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        margin: 10px auto 20px;
+        text-align: center;
+        i {
+          font-size: 25px;
+          line-height: 60px;
+        }
+      }
+      &:hover .icon {
+        box-shadow: var(--inner-shadow-0);
+      }
+      &:hover i {
+        font-size: 35px;
       }
     }
   }
