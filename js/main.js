@@ -45,17 +45,4 @@ letters.forEach((item) => {
   });
 });
 // -------------------hover animation ends------------------------
-// // -------------about section tabs start---------------
-// // (() => {
-// console.log("hi");
-// const aboutContainer = document.querySelector(".about-container");
-// console.log(aboutContainer);
 
-// const tabsContainer = document.querySelectorAll(".tabs-item");
-// tabsContainer.addEventListener("click", (event) => {
-//   console.log("hi");
-//   console.log(event.target);
-// });
-// // })();
-
-// -------------about section tabs ends---------------
