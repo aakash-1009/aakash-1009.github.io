@@ -1101,7 +1101,7 @@ nav ul li.hover-in-shadow:hover::after {
 
 .about-container .about-info p {
   font-size: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 25px;
   margin-bottom: 15px;
   color: var(--text-black-600);
@@ -1129,6 +1129,86 @@ nav ul li.hover-in-shadow:hover::after {
   width: 100%;
   border: 10px solid transparent;
   border-radius: 5px;
+}
+
+.about-container .about-img .social-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-container .about-img .social-links .socialIcons {
+  position: relative;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 5px 15px -5px #000000;
+          box-shadow: 0 5px 15px -5px #000000;
+  color: var(--text-black-600);
+  overflow: hidden;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.about-container .about-img .social-links .socialIcons i {
+  line-height: 50px;
+  font-size: 20px;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.about-container .about-img .social-links .socialIcons:hover i {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  color: white;
+}
+
+.about-container .about-img .social-links .socialIcons::before {
+  position: absolute;
+  content: "";
+  width: 120%;
+  height: 120%;
+  background: var(--skin-color);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: -110%;
+  top: 90%;
+}
+
+.about-container .about-img .social-links .socialIcons:hover::before {
+  -webkit-animation: socialIconsanimate 0.8s 1;
+          animation: socialIconsanimate 0.8s 1;
+  top: -10%;
+  right: -10%;
+}
+
+@-webkit-keyframes socialIconsanimate {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    left: -10%;
+    top: -10%;
+  }
+}
+
+@keyframes socialIconsanimate {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    left: -10%;
+    top: -10%;
+  }
 }
 
 footer p {

@@ -168,8 +168,8 @@ img {
     width: 30px;
     height: 10px;
     background: var(--skin-color);
-    box-shadow: 0 0 5px var(--skin-color), 0 0 15px var(--skin-color), 0 0 30px var(--skin-color),
-    0 0 60px var(--skin-color);
+    box-shadow: 0 0 5px var(--skin-color), 0 0 15px var(--skin-color),
+      0 0 30px var(--skin-color), 0 0 60px var(--skin-color);
     border-radius: 10px;
     transition: 0.5s;
     transition-delay: 0s;
@@ -190,8 +190,8 @@ img {
     width: 30px;
     height: 10px;
     background: var(--skin-color);
-    box-shadow: 0 0 5px var(--skin-color), 0 0 15px var(--skin-color), 0 0 30px var(--skin-color),
-    0 0 60px var(--skin-color);
+    box-shadow: 0 0 5px var(--skin-color), 0 0 15px var(--skin-color),
+      0 0 30px var(--skin-color), 0 0 60px var(--skin-color);
     border-radius: 10px;
     transition: 0.5s;
     transition-delay: 0s;
@@ -203,7 +203,6 @@ img {
     border-radius: 30px;
     transition-delay: 0.5s;
   }
- 
 }
 .effect-wrap .effect {
   position: absolute;
@@ -818,14 +817,14 @@ nav {
     flex: 0 0 60%;
     max-width: 60%;
     padding: 0 15px;
-    p{
+    p {
       font-size: 16px;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       line-height: 25px;
       margin-bottom: 15px;
       color: var(--text-black-600);
     }
-    span{
+    span {
       font-weight: 600;
       font-size: 20px;
     }
@@ -843,6 +842,63 @@ nav {
         border: 10px solid transparent;
         border-radius: 5px;
       }
+    }
+    .social-links {
+      text-align: center;
+      margin-top: 20px;
+      .socialIcons{
+        position: relative;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px -5px #000000;
+        color: var(--text-black-600);
+        overflow:  hidden;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        // background: #fff;
+        margin: 10px;
+        i{
+            line-height: 50px;
+            font-size: 20px;
+            transition: .3s linear;
+        }
+        &:hover i{
+            transform: scale(1.5);
+            color: white;
+        
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            width: 120%;
+            height: 120%;
+            background: var(--skin-color);
+            transform: rotate(45deg);
+            right: -110%;
+            top: 90%;
+        }
+        &:hover::before{
+            animation: socialIconsanimate 0.8s 1;
+            top: -10%;
+            right: -10%;
+        }
+        
+    }
+    @keyframes socialIconsanimate{
+        0%{
+            left: -110%;
+            top: 90%;
+        }
+        50%{
+            left: 10%;
+            top: -30%;
+        }
+        100%{
+            left: -10%;
+            top: -10%;
+        }
+    }
+    
     }
   }
 }
