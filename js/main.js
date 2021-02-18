@@ -34,14 +34,28 @@ function createBoxes() {
 createBoxes();
 // -------------------------home img end-----------------
 // -------------hover animation--------------------
-const letters = document.querySelectorAll("span.blast")
-letters.forEach(item => {
+const letters = document.querySelectorAll("span.blast");
+letters.forEach((item) => {
   item.addEventListener("mouseenter", () => {
-      item.classList.toggle('rubberBand')
-      
-  })
+    item.classList.toggle("rubberBand");
+    // console.log("enterd")
+  });
   item.addEventListener("mouseout", () => {
-      item.classList.toggle('rubberBand')
-      
-  })
-})
+    item.classList.toggle("rubberBand");
+  });
+});
+// -------------------hover animation ends------------------------
+// // -------------about section tabs start---------------
+// // (() => {
+// console.log("hi");
+// const aboutContainer = document.querySelector(".about-container");
+// console.log(aboutContainer);
+
+// const tabsContainer = document.querySelectorAll(".tabs-item");
+// tabsContainer.addEventListener("click", (event) => {
+//   console.log("hi");
+//   console.log(event.target);
+// });
+// // })();
+
+// -------------about section tabs ends---------------
