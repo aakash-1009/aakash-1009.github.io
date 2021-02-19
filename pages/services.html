@@ -27,6 +27,7 @@
   <body>
     <!-- ************************HEADER/ABOUT START******************* -->
     <section class="header services" id="services">
+      <div id="particles-js"></div>
       <!-- ----------------NAV CIRCLE START----------------- -->
       <div class="container">
         <div class="circle-container">
@@ -58,7 +59,7 @@
               muted
               height="120"
               width="300"
-            ></video>
+              ></video>
             <h2 data-heading="What i do" class="smokeText">
               <span>S</span>
               <span>E</span>
@@ -163,7 +164,7 @@
         </li>
         <li class="outer-shadow hover-in-shadow">
           <a href="services.html"
-            ><i class="fas fa-concierge-bell"></i> Services</a
+          ><i class="fas fa-concierge-bell"></i> Services</a
           >
         </li>
         <li class="outer-shadow hover-in-shadow">
@@ -174,38 +175,15 @@
         </li>
         <li class="outer-shadow hover-in-shadow">
           <a href="testimonials.html"
-            ><i class="fas fa-comments"></i>Testimonials</a
+          ><i class="fas fa-comments"></i>Testimonials</a
           >
         </li>
       </ul>
     </nav>
     <footer><p>Created by &copy; Aakash Garg</p></footer>
-    <script>
-      console.log("hi");
-      const aboutContainer = document.querySelector(".about-container");
-      const tabsContainer = document.querySelector(".about-tabs");
-
-      tabsContainer.addEventListener("click", (event) => {
-        if (
-          event.target.classList.contains("tab-item") &&
-          !event.target.classList.contains("active")
-        ) {
-          const target = event.target.getAttribute("data-target");
-          //deactivate existing active "tab-item"
-          tabsContainer
-            .querySelector(".active")
-            .classList.remove("outer-shadow", "active");
-          //activate new  "tab-item"
-          event.target.classList.add("active", "outer-shadow");
-          //deactovate existing active "tab-content"
-          aboutContainer
-            .querySelector(".tab-content.active")
-            .classList.remove("active");
-          //activate new "tab-content"
-          aboutContainer.querySelector(target).classList.add("active");
-        }
-      });
-    </script>
+    
+      <script src="../particles.js"></script>
+      <script src="../app.js"></script>
     <!-- main js -->
     <script src="../js/main.js"></script>
     <!-- style switcher js -->

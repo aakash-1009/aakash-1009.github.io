@@ -18,6 +18,7 @@
       integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
       crossorigin="anonymous"
     ></script>
+
     <!-- main css -->
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <!-- default color skin -->
@@ -27,6 +28,7 @@
   <body>
     <!-- ************************HEADER/ABOUT START******************* -->
     <section class="header about" id="about">
+      <div id="particles-js"></div>
       <!-- ----------------NAV CIRCLE START----------------- -->
       <div class="container">
         <div class="circle-container">
@@ -183,7 +185,7 @@
                 </li>
                 <li>
                   <a href="" class="skillsIcons"
-                    ><i class="fab fa-figma"></i
+                    ><i class="fab fa-github"></i
                   ></a>
                 </li>
                 <li>
@@ -355,12 +357,14 @@
       </ul>
     </nav>
     <footer><p>Created by &copy; Aakash Garg</p></footer>
+
     <script>
-      console.log("hi");
       const aboutContainer = document.querySelector(".about-container");
       const tabsContainer = document.querySelector(".about-tabs");
+      console.log(tabsContainer);
 
       tabsContainer.addEventListener("click", (event) => {
+        console.log("hi");
         if (
           event.target.classList.contains("tab-item") &&
           !event.target.classList.contains("active")
@@ -381,6 +385,8 @@
         }
       });
     </script>
+    <script src="../particles.js"></script>
+    <script src="../app.js"></script>
     <!-- main js -->
     <script src="../js/main.js"></script>
     <!-- style switcher js -->

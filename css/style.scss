@@ -5,6 +5,18 @@
 
 /*----------------- global style------------------ */
 // define custom css variables
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+}
 :root {
   --bg-black-900: #000000;
   --bg-black-100: #dddddd;
@@ -87,6 +99,7 @@ img {
   height: 100%;
   width: 100%;
   transition: all 0.3s ease-in;
+  z-index: -1;
 }
 .hover-in-shadow:hover::after {
   box-shadow: var(--inner-shadow);
@@ -102,6 +115,7 @@ img {
   border-radius: 30px;
   transition: all 0.3s ease;
   display: inline-block;
+  border: none;
 }
 .btn-1::after {
   border-radius: 30px;
@@ -438,6 +452,7 @@ img {
 // --------------nav button-------------------------
 .header {
   background-color: var(--bg-black-50);
+  // background-color: #111;
   transform-origin: top left;
   transition: all 0.5s linear;
   width: 100vw;
@@ -1120,7 +1135,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 27%;
     height: 400px;
     color: white;
     background: #111;
@@ -1218,6 +1233,208 @@ nav {
   }
 }
 //-----------------service styling end------------------
+// -------------------testimonials styling starts-----------------
+.testimonials-container {
+  padding: 20px 0;
+  min-height: 100vh;
+  .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 320px;
+    background: white;
+    filter: blur(1.5px);
+    border-radius: 10px;
+  }
+  .swiper-slide-active {
+    filter: blur(0);
+  }
+  .testimonialBox {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    padding-top: 80px;
+    color: #999;
+
+    .quote {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      opacity: 0.3;
+    }
+    p {
+      line-height: 1.5;
+    }
+    .details {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+
+      .imgbox {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 10px;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      h3 {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: steelblue;
+        line-height: 1.1rem;
+        span {
+          font-size: 12px;
+          color: #666;
+        }
+      }
+    }
+  }
+}
+
+// -------------------testimonials styling ends-----------------
+// -------------------Contact styling start-----------------
+.contact-container {
+  min-height: 100vh;
+  padding: 50px 0;
+  .contact-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+    display: flex;
+    .contact-item-inner {
+      padding: 30px 15px;
+      text-align: center;
+      border-radius: 5px;
+      width: 100%;
+
+      i {
+        font-size: 25px;
+        color: var(--skin-color);
+      }
+      span {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-black-700);
+        margin: 10px 0;
+        text-transform: capitalize;
+      }
+      p {
+        font-size: 16px;
+        color: var(--text-black-600);
+        line-height: 25px;
+        margin: 0;
+        word-break: break-word;
+      }
+    }
+  }
+  .contact-form {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .w-50 {
+    padding: 0 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .input-group {
+    margin: 25px 0;
+    transition: all 0.4s ease;
+    border-radius: 30px;
+    &::after {
+      border-radius: 30px;
+    }
+    textarea.input-control {
+      height: 200px;
+      padding-top: 12px;
+      resize: none;
+      color: var(--skin-color);
+      &:focus {
+        outline: none;
+      }
+    }
+    .input-control {
+      height: 40px;
+      display: block;
+      width: 100%;
+      border: none;
+      border-radius: 30px;
+      background-color: transparent;
+      font-size: 16px;
+      padding: 15px;
+      color: var(--text-black-700);
+    }
+  }
+  .submit-btn {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: right;
+    padding: 0 15px;
+  }
+  .form-control {
+    position: relative;
+    //   top horizontal bottom
+    margin: 20px 0;
+    width: 85%;
+    color: var(--text-black-700);
+
+    input {
+      background-color: transparent;
+      border: 0;
+      border-bottom: 2px solid var(--text-black-700);
+      display: block;
+      width: 100%;
+      padding: 15px 0;
+      font-size: 18px;
+      color: var(--skin-color);
+
+      &:focus,
+      &:valid {
+        outline: 0;
+        border-bottom-color: var(--skin-color);
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      pointer-events: none;
+      span {
+        font-weight: 600;
+      }
+
+      span {
+        display: inline-block;
+        font-size: 18px;
+        min-width: 5px;
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+    }
+  }
+  .form-control input:focus + label span,
+  .form-control input:valid + label span {
+    color: var(--skin-color);
+    transform: translateY(-30px);
+  }
+}
+
+// -------------------Contact styling ends-----------------
 
 // -----------------footer--------------------
 footer p {
