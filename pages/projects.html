@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Personal Portfolio Website</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <!-- -----typed.js------- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
+      integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- main css -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <!-- default color skin -->
+    <link rel="stylesheet" href="../css/skins/color-1.css" />
+  </head>
+
+  <body>
+    <!-- ************************HEADER/ABOUT START******************* -->
+    <section class="header projects" id="projects">
+      <div id="particles-js"></div>
+      <!-- ----------------NAV CIRCLE START----------------- -->
+      <div class="container">
+        <div class="circle-container">
+          <div class="circle">
+            <button id="close">
+              <i class="fas fa-times outer-shadow hover-in-shadow"></i>
+            </button>
+            <button id="open">
+              <i class="fas fa-bars outer-shadow hover-in-shadow"></i>
+            </button>
+          </div>
+        </div>
+        <!-- -----------------NAV CIRCLE END------------------ -->
+        <!-- -----------------LOGO START-------------------------- -->
+        <div class="row justify-content-between" id="header-row">
+          <div class="logo">
+            <a href="index.html"> A </a>
+          </div>
+        </div>
+      </div>
+      <!-- -------------------LOGO END-------------------- -->
+      <!-- -----------------------------HOME CONTENT------------------------- -->
+      <div class="projects-container container">
+        <div class="row">
+          <div class="section-title smoke">
+            <video
+              src="../smoke.mp4"
+              autoplay
+              muted
+              height="120"
+              width="300"
+            ></video>
+            <h2 data-heading="what i made" class="smokeText">
+              <span>P</span>
+              <span>R</span>
+              <span>O</span>
+              <span>J</span>
+              <span>E</span>
+              <span>C</span>
+              <span>T</span>
+              <span>S</span>
+            </h2>
+          </div>
+        </div>
+        <!-- ----------------------portfolio filter start-------------- -->
+        <div class="row">
+          <div class="project-filter">
+            <span class="filter-item outer-shadow active" data-target="all"
+              >all</span
+            ><span class="filter-item" data-target="web-application"
+              >web-application</span
+            ><span class="filter-item" data-target="e-commerce">e-commerce</span
+            ><span class="filter-item" data-target="mobile-application"
+              >mobile-application</span
+            >
+          </div>
+        </div>
+        <!-- ----------------------portfolio filter ends-------------- -->
+        <!-- ----------------------------------PROJECT ITEMS START---------------------------------- -->
+        <div class="row project-items">
+          <!-- ----------project item start-------------- -->
+          <div class="project-item" data-category="web-application">
+            <div class="project-item-inner outer-shadow">
+              <div class="project-item-img">
+                <img
+                  src="../img/projects/thumb/project-1.png"
+                  alt="portfolio"
+                  srcset=""
+                  data-screenshots="../img/projects/large/project-1/1.png,../img/projects/large/project-1/2.png,../img/projects/large/project-1/3.png,../img/projects/large/project-1/4.png,../img/projects/large/project-1/5.png"
+                />
+                <!-- view project button -->
+                <span class="view-project">view Project</span>
+              </div>
+              <p class="project-item-title">Portfolio</p>
+              <!-- project item details start -->
+              <div class="project-item-details">
+                <div class="row">
+                  <div class="description">
+                    <h3>Project Brief:</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nesciunt asperiores blanditiis id consectetur iste error
+                      rerum quibusdam reprehenderit eos sequi, facere quos neque
+                      omnis dolorum Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum animi voluptatibus necessitatibus perspiciatis repellendus nemo quos vero totam laborum?
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h3>Project Info</h3>
+                    <ul>
+                      <li>Date - <span>2020</span></li>
+                      <li>Client - <span>abc</span></li>
+                      <li>Tools - <span>html, css , javascript</span></li>
+                      <li>Web - <span><a href="#">www.xyz.com</a></span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- project item details end -->
+            </div>
+          </div>
+          <!-- ----------project item end-------------- -->
+          <!-- ----------project item start-------------- -->
+          <div class="project-item" data-category="web-application">
+            <div class="project-item-inner outer-shadow">
+              <div class="project-item-img">
+                <img
+                  src="../img/projects/thumb/project-2.png"
+                  alt="portfolio"
+                  srcset=""
+                  data-screenshots="../img/projects/large/project-2/1.png,../img/projects/large/project-2/2.png"
+                />
+                <!-- view project button -->
+                <span class="view-project">view pproject</span>
+              </div>
+              <p class="project-item-title">Wedding Couple</p>
+              <!-- project item details start -->
+              <div class="project-item-details">
+                <div class="row">
+                  <div class="description">
+                    <h3>Project Brief:</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nesciunt asperiores blanditiis id consectetur iste error
+                      rerum quibusdam reprehenderit eos sequi, facere quos neque
+                      omnis dolorum Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum animi voluptatibus necessitatibus perspiciatis repellendus nemo quos vero totam laborum?
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h3>Project Info</h3>
+                    <ul>
+                      <li>Date - <span>2020</span></li>
+                      <li>Client - <span>abc</span></li>
+                      <li>Tools - <span>html, css , javascript</span></li>
+                      <li>Web - <span><a href="#">www.xyz.com</a></span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- project item details end -->
+            </div>
+          </div>
+          <!-- ----------project item end-------------- -->
+          <!-- ----------project item start-------------- -->
+          <div class="project-item" data-category="e-commerce">
+            <div class="project-item-inner outer-shadow">
+              <div class="project-item-img">
+                <img
+                  src="../img/projects/thumb/project-3.png"
+                  alt="portfolio"
+                  srcset=""
+                  data-screenshots="../img/projects/large/project-3/1.png,../img/projects/large/project-3/2.png,../img/projects/large/project-3/3.png,../img/projects/large/project-3/4.png,../img/projects/large/project-3/5.png"
+                />
+                <!-- view project button -->
+                <span class="view-project">view Project</span>
+              </div>
+              <p class="project-item-title">Product Page</p>
+              <!-- project item details start -->
+              <div class="project-item-details">
+                <div class="row">
+                  <div class="description">
+                    <h3>Project Brief:</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nesciunt asperiores blanditiis id consectetur iste error
+                      rerum quibusdam reprehenderit eos sequi, facere quos neque
+                      omnis dolorum Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum animi voluptatibus necessitatibus perspiciatis repellendus nemo quos vero totam laborum?
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h3>Project Info</h3>
+                    <ul>
+                      <li>Date - <span>2020</span></li>
+                      <li>Client - <span>abc</span></li>
+                      <li>Tools - <span>html, css , bootstrap-4</span></li>
+                      <li>Web - <span><a href="#">www.xyz.com</a></span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- project item details end -->
+            </div>
+          </div>
+          <!-- ----------project item end-------------- -->
+          <!-- ----------project item start-------------- -->
+          <div class="project-item" data-category="mobile-application">
+            <div class="project-item-inner outer-shadow">
+              <div class="project-item-img">
+                <img
+                  src="../img/projects/thumb/project-4.png"
+                  alt="portfolio"
+                  srcset=""
+                  data-screenshots="../img/projects/large/project-4/1.png"
+                />
+                <!-- view project button -->
+                <span class="view-project">view pproject</span>
+              </div>
+              <p class="project-item-title">photographer portfolio</p>
+              <!-- project item details start -->
+              <div class="project-item-details">
+                <div class="row">
+                  <div class="description">
+                    <h3>Project Brief:</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nesciunt asperiores blanditiis id consectetur iste error
+                      rerum quibusdam reprehenderit eos sequi, facere quos neque
+                      omnis dolorum Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum animi voluptatibus necessitatibus perspiciatis repellendus nemo quos vero totam laborum?
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h3>Project Info</h3>
+                    <ul>
+                      <li>Date - <span>2020</span></li>
+                      <li>Client - <span>abc</span></li>
+                      <li>Tools - <span>html, css , javascript</span></li>
+                      <li>Web - <span><a href="#">www.xyz.com</a></span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- project item details end -->
+            </div>
+          </div>
+          <!-- ----------project item end-------------- -->
+          <!-- ----------project item start-------------- -->
+          <div class="project-item" data-category="e-commerce">
+            <div class="project-item-inner outer-shadow">
+              <div class="project-item-img">
+                <img
+                  src="../img/projects/thumb/project-5.png"
+                  alt="portfolio"
+                  srcset=""
+                  data-screenshots="../img/projects/large/project-5/1.png"
+                />
+                <!-- view project button -->
+                <span class="view-project">view pproject</span>
+              </div>
+              <p class="project-item-title">Fitness and Gym</p>
+              <!-- project item details start -->
+              <div class="project-item-details">
+                <div class="row">
+                  <div class="description">
+                    <h3>Project Brief:</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nesciunt asperiores blanditiis id consectetur iste error
+                      rerum quibusdam reprehenderit eos sequi, facere quos neque
+                      omnis dolorum Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum animi voluptatibus necessitatibus perspiciatis repellendus nemo quos vero totam laborum?
+                    </p>
+                  </div>
+                  <div class="info">
+                    <h3>Project Info</h3>
+                    <ul>
+                      <li>Date - <span>2020</span></li>
+                      <li>Client - <span>abc</span></li>
+                      <li>Tools - <span>html, css , javascript</span></li>
+                      <li>Web - <span><a href="#">www.xyz.com</a></span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- project item details end -->
+            </div>
+          </div>
+          <!-- ----------project item end-------------- -->
+          <div class="project-item" data-category="web-application">
+            <div class="project-item-inner outer-shadow">
+              <div class="project-item-img">
+                <img
+                  src="../img/projects/thumb/project-8.png"
+                  alt="portfolio"
+                  srcset=""
+                  data-screenshots="../img/projects/large/project-8/1.png,../img/projects/large/project-8/2.png"
+                />
+                <!-- view project button -->
+                <span class="view-project">View Project</span>
+              </div>
+              <p class="project-item-title">Personal Portfolio</p>
+              <!-- project item details start -->
+              <!-- this project item has no details -->
+              <!-- project item details end -->
+            </div>
+          </div>
+        </div>
+
+        <!-- ------------------------------------PROJECT ITEMS END---------------------------------------- -->
+      </div>
+    </section>
+    <!-- -------------HEADER/HOME END----------------- -->
+    <!-- navlink a not working due to after on a  -->
+    <nav>
+      <ul>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="../index.html"><i class="fas fa-home"></i> Home </a>
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="about.html"><i class="fas fa-user-alt"></i> About</a>
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="services.html"
+            ><i class="fas fa-concierge-bell"></i> Services</a
+          >
+        </li>
+        <li class="outer-shadow hover-in-shadow active">
+          <a href="projects.html"><i class="fas fa-tasks"></i> Projects</a>
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </li>
+        <li class="outer-shadow hover-in-shadow">
+          <a href="testimonials.html"
+            ><i class="fas fa-comments"></i>Testimonials</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <footer><p>Created by &copy; Aakash Garg</p></footer>
+    <script>
+      const labels = document.querySelectorAll(".form-control label");
+
+      labels.forEach((label) => {
+        label.innerHTML = label.innerText
+          .split("")
+          .map(
+            (letter, idx) =>
+              `<span style="transition-delay:${idx * 50}ms">${letter}</span>`
+          )
+          .join("");
+      });
+    </script>
+    <script src="../particles.js"></script>
+    <script src="../app.js"></script>
+    <!-- main js -->
+    <script src="../js/main.js"></script>
+    <!-- style switcher js -->
+    <!-- <script src="../js/style-switcher.js"></script> -->
+  </body>
+</html>

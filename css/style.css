@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "myFont";
+  src: url("myfont.ttf");
+  font-weight: 600;
+}
+
 /*----------------- global style------------------ */
 canvas {
   display: block;
@@ -136,6 +142,7 @@ img {
 .btn-1 {
   padding: 10px 25px;
   font-size: 18px;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: var(--skin-color);
   background-color: transparent;
@@ -184,6 +191,7 @@ img {
   color: var(--text-black-700);
   z-index: 1;
   font-weight: normal;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
   text-decoration: none;
   overflow: hidden;
@@ -880,8 +888,8 @@ nav ul li.hover-in-shadow:hover::after {
 
 .header .logo a {
   display: inline-block;
-  height: 40px;
-  width: 40px;
+  height: 43px;
+  width: 43px;
   text-align: center;
   line-height: 36px;
   font-size: 30px;
@@ -889,6 +897,7 @@ nav ul li.hover-in-shadow:hover::after {
   border-radius: 50%;
   color: var(--skin-color);
   font-weight: 600;
+  font-family: "myFont";
 }
 
 /*------------ header styling end--------------- */
@@ -998,8 +1007,8 @@ nav ul li.hover-in-shadow:hover::after {
   background: var(--skin-color);
   -webkit-box-shadow: 0 0 10px var(--skin-color), 0 0 40px var(--skin-color), 0 0 80px var(--skin-color);
           box-shadow: 0 0 10px var(--skin-color), 0 0 40px var(--skin-color), 0 0 80px var(--skin-color);
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transition-delay: 0.85s;
+          transition-delay: 0.85s;
 }
 
 .home-container .home-img .img-box a span {
@@ -1053,24 +1062,24 @@ nav ul li.hover-in-shadow:hover::after {
   right: 100%;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 .home-container .home-img .img-box a:hover span:nth-child(2) {
   top: 100%;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-transition-delay: 0.25s;
-          transition-delay: 0.25s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 .home-container .home-img .img-box a:hover span:nth-child(4) {
   bottom: 100%;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-transition-delay: 0.75s;
-          transition-delay: 0.75s;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 
 .boxes {
@@ -1234,8 +1243,8 @@ nav ul li.hover-in-shadow:hover::after {
     top: 90%;
   }
   50% {
-    left: 10%;
-    top: -30%;
+    left: 25%;
+    top: -40%;
   }
   100% {
     left: -10%;
@@ -1249,8 +1258,8 @@ nav ul li.hover-in-shadow:hover::after {
     top: 90%;
   }
   50% {
-    left: 10%;
-    top: -30%;
+    left: 25%;
+    top: -40%;
   }
   100% {
     left: -10%;
@@ -1276,6 +1285,7 @@ nav ul li.hover-in-shadow:hover::after {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   font-size: 16px;
+  font-family: "Poppins", sans-serif;
   color: var(--text-black-600);
   font-weight: 500;
   text-transform: capitalize;
@@ -1434,6 +1444,22 @@ nav ul li.hover-in-shadow:hover::after {
   padding: 30px;
   border-radius: 5px;
   position: relative;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.about-container .timeline .timeline-item-inner:hover span {
+  color: white;
+}
+
+.about-container .timeline .timeline-item-inner:hover {
+  background: var(--skin-color);
+}
+
+.about-container .timeline .timeline-item-inner:hover h3,
+.about-container .timeline .timeline-item-inner:hover h4,
+.about-container .timeline .timeline-item-inner:hover p {
+  color: var(--bg-black-100);
 }
 
 .about-container .timeline .timeline-item-inner::before {
@@ -1480,6 +1506,7 @@ nav ul li.hover-in-shadow:hover::after {
   color: var(--text-black-600);
   margin: 0;
   font-style: italic;
+  font-family: "Poppins", sans-serif;
 }
 
 .about-container .timeline .timeline-item-inner p {
@@ -1487,6 +1514,7 @@ nav ul li.hover-in-shadow:hover::after {
   color: var(--text-black-600);
   line-height: 26px;
   margin: 15px 0 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .services-container {
@@ -1598,6 +1626,7 @@ nav ul li.hover-in-shadow:hover::after {
   color: white;
   margin-bottom: 10px;
   line-height: 2em;
+  font-family: "Poppins", sans-serif;
 }
 
 .services-container .gradBox .gradBoxContent .icon {
@@ -1620,6 +1649,88 @@ nav ul li.hover-in-shadow:hover::after {
 
 .services-container .gradBox .gradBoxContent:hover i {
   font-size: 35px;
+}
+
+.projects-container {
+  padding: 20px 0;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.projects-container .section-title {
+  margin-bottom: 30px;
+}
+
+.projects-container .project-filter {
+  padding: 0 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.projects-container .filter-item {
+  display: inline-block;
+  margin: 0 5px 10px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-black-600);
+  text-transform: capitalize;
+  font-size: 16px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.projects-container .filter-item:hover:not(.active) {
+  opacity: 0.6;
+}
+
+.projects-container .filter-item.active {
+  color: var(--skin-color);
+}
+
+.projects-container .project-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.33%;
+          flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects-container .project-item-details {
+  display: none;
+}
+
+.projects-container .project-item-inner {
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.projects-container .project-item-inner p {
+  font-size: 16px;
+  margin: 10px 0 0;
+  color: var(--text-black-600);
+  text-transform: capitalize;
+}
+
+.projects-container .project-item-img img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.projects-container .project-item-img .view-project {
+  text-transform: capitalize;
 }
 
 .testimonials-container {
@@ -1646,6 +1757,15 @@ nav ul li.hover-in-shadow:hover::after {
 .testimonials-container .swiper-slide-active {
   -webkit-filter: blur(0);
           filter: blur(0);
+  -webkit-box-shadow: 5px 5px 20px var(--skin-color), -5px -5px 20px var(--skin-color);
+          box-shadow: 5px 5px 20px var(--skin-color), -5px -5px 20px var(--skin-color);
+  background: var(--skin-color);
+}
+
+.testimonials-container .swiper-slide-active .testimonialBox p,
+.testimonials-container .swiper-slide-active .testimonialBox .details h3 span {
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
 .testimonials-container .testimonialBox {
@@ -1700,7 +1820,7 @@ nav ul li.hover-in-shadow:hover::after {
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: steelblue;
+  color: #4b7eb8;
   line-height: 1.1rem;
 }
 
@@ -1730,6 +1850,8 @@ nav ul li.hover-in-shadow:hover::after {
   text-align: center;
   border-radius: 5px;
   width: 100%;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .contact-container .contact-item .contact-item-inner i {
@@ -1744,6 +1866,7 @@ nav ul li.hover-in-shadow:hover::after {
   color: var(--text-black-700);
   margin: 10px 0;
   text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact-container .contact-item .contact-item-inner p {
@@ -1752,6 +1875,23 @@ nav ul li.hover-in-shadow:hover::after {
   line-height: 25px;
   margin: 0;
   word-break: break-word;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-container .contact-item .contact-item-inner:hover i {
+  color: white;
+  font-size: 28px;
+}
+
+.contact-container .contact-item .contact-item-inner:hover {
+  background: var(--skin-color);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.contact-container .contact-item .contact-item-inner:hover span,
+.contact-container .contact-item .contact-item-inner:hover p {
+  color: var(--bg-black-100);
 }
 
 .contact-container .contact-form {
@@ -1785,6 +1925,7 @@ nav ul li.hover-in-shadow:hover::after {
   padding-top: 12px;
   resize: none;
   color: var(--skin-color);
+  font-family: 'Poppins', sans-serif;
 }
 
 .contact-container .input-group textarea.input-control:focus {
@@ -1828,6 +1969,7 @@ nav ul li.hover-in-shadow:hover::after {
   padding: 15px 0;
   font-size: 18px;
   color: var(--skin-color);
+  font-family: 'Poppins', sans-serif;
 }
 
 .contact-container .form-control input:focus, .contact-container .form-control input:valid {

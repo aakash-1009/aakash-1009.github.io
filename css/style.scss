@@ -2,6 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
 // font-family: 'Baloo Da 2', cursive;
 // font-family: 'Poppins', sans-serif;
+@font-face {
+  font-family: "myFont";
+  src: url("myfont.ttf");
+  font-weight: 600;
+}
 
 /*----------------- global style------------------ */
 // define custom css variables
@@ -107,6 +112,7 @@ img {
 .btn-1 {
   padding: 10px 25px;
   font-size: 18px;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: var(--skin-color);
   background-color: transparent;
@@ -144,6 +150,7 @@ img {
     color: var(--text-black-700);
     z-index: 1;
     font-weight: normal;
+    font-family: "Poppins", sans-serif;
     letter-spacing: 1px;
     text-decoration: none;
     overflow: hidden;
@@ -637,8 +644,8 @@ nav {
 
   .logo a {
     display: inline-block;
-    height: 40px;
-    width: 40px;
+    height: 43px;
+    width: 43px;
     text-align: center;
     line-height: 36px;
     font-size: 30px;
@@ -646,6 +653,7 @@ nav {
     border-radius: 50%;
     color: var(--skin-color);
     font-weight: 600;
+    font-family: "myFont";
   }
 }
 /*------------ header styling end--------------- */
@@ -726,7 +734,7 @@ nav {
     background: var(--skin-color);
     box-shadow: 0 0 10px var(--skin-color), 0 0 40px var(--skin-color),
       0 0 80px var(--skin-color);
-    transition-delay: 1s;
+    transition-delay: 0.85s;
   }
 
   span {
@@ -770,17 +778,17 @@ nav {
   &:hover span:nth-child(3) {
     right: 100%;
     transition: 1s;
-    transition-delay: 0.5s;
+    transition-delay: 0.4s;
   }
   &:hover span:nth-child(2) {
     top: 100%;
     transition: 1s;
-    transition-delay: 0.25s;
+    transition-delay: 0.2s;
   }
   &:hover span:nth-child(4) {
     bottom: 100%;
     transition: 1s;
-    transition-delay: 0.75s;
+    transition-delay: 0.6s;
   }
 }
 
@@ -916,8 +924,8 @@ nav {
           top: 90%;
         }
         50% {
-          left: 10%;
-          top: -30%;
+          left: 25%;
+          top: -40%;
         }
         100% {
           left: -10%;
@@ -939,6 +947,8 @@ nav {
       border-radius: 30px;
       transition: all 0.3s ease;
       font-size: 16px;
+      font-family: "Poppins", sans-serif;
+
       color: var(--text-black-600);
       font-weight: 500;
       text-transform: capitalize;
@@ -1024,6 +1034,7 @@ nav {
     flex: 0 0 100%;
     max-width: 100%;
     position: relative;
+
     &:before {
       content: "";
       width: 2px;
@@ -1066,6 +1077,18 @@ nav {
       padding: 30px;
       border-radius: 5px;
       position: relative;
+      transition: all 1s ease;
+      &:hover span {
+        color: white;
+      }
+      &:hover {
+        background: var(--skin-color);
+        h3,
+        h4,
+        p {
+          color: var(--bg-black-100);
+        }
+      }
       &::before {
         content: "";
         position: absolute;
@@ -1101,18 +1124,21 @@ nav {
         font-weight: 600;
         margin: 0 0 5px;
         text-transform: capitalize;
+        // font-family: "Poppins", sans-serif;
       }
       h4 {
         font-size: 16px;
         color: var(--text-black-600);
         margin: 0;
         font-style: italic;
+        font-family: "Poppins", sans-serif;
       }
       p {
         font-size: 16px;
         color: var(--text-black-600);
         line-height: 26px;
         margin: 15px 0 0;
+        font-family: "Poppins", sans-serif;
       }
     }
   }
@@ -1211,6 +1237,7 @@ nav {
         color: white;
         margin-bottom: 10px;
         line-height: 2em;
+        font-family: "Poppins", sans-serif;
       }
       .icon {
         border-radius: 50%;
@@ -1233,6 +1260,70 @@ nav {
   }
 }
 //-----------------service styling end------------------
+// -------------------projects styling starts---------------------
+.projects-container {
+  padding: 20px 0;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  .section-title {
+    margin-bottom: 30px;
+  }
+  .project-filter {
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .filter-item {
+    display: inline-block;
+    margin: 0 5px 10px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-black-600);
+    text-transform: capitalize;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    &:hover:not(.active) {
+      opacity: 0.6;
+    }
+    &.active {
+      color: var(--skin-color);
+    }
+  }
+  .project-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .project-item-details {
+    display: none;
+  }
+  .project-item-inner {
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    p {
+      font-size: 16px;
+      margin: 10px 0 0;
+      color: var(--text-black-600);
+      text-transform: capitalize;
+    }
+  }
+  .project-item-img img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .project-item-img .view-project {
+    text-transform: capitalize;
+  }
+}
+// -------------------projects styling ends---------------------------------------------
 // -------------------testimonials styling starts-----------------
 .testimonials-container {
   padding: 20px 0;
@@ -1253,6 +1344,14 @@ nav {
   }
   .swiper-slide-active {
     filter: blur(0);
+    box-shadow: 5px 5px 20px var(--skin-color), -5px -5px 20px var(--skin-color);
+    background: var(--skin-color);
+    .testimonialBox p,
+    .testimonialBox .details h3 span {
+      color: white;
+      font-family: 'Poppins', sans-serif;
+
+    }
   }
   .testimonialBox {
     position: relative;
@@ -1295,7 +1394,7 @@ nav {
         font-size: 16px;
         font-weight: 500;
         letter-spacing: 1px;
-        color: steelblue;
+        color: rgb(75, 126, 184);
         line-height: 1.1rem;
         span {
           font-size: 12px;
@@ -1321,6 +1420,7 @@ nav {
       text-align: center;
       border-radius: 5px;
       width: 100%;
+      transition: all 0.8s ease;
 
       i {
         font-size: 25px;
@@ -1333,6 +1433,7 @@ nav {
         color: var(--text-black-700);
         margin: 10px 0;
         text-transform: capitalize;
+        font-family: "Poppins", sans-serif;
       }
       p {
         font-size: 16px;
@@ -1340,6 +1441,20 @@ nav {
         line-height: 25px;
         margin: 0;
         word-break: break-word;
+        font-family: "Poppins", sans-serif;
+      }
+      &:hover i {
+        color: white;
+        font-size: 28px;
+      }
+      &:hover {
+        background: var(--skin-color);
+        transform: translateY(-10px);
+      }
+      &:hover span,
+      &:hover p {
+        color: var(--bg-black-100);
+        // color: white;
       }
     }
   }
@@ -1364,6 +1479,8 @@ nav {
       padding-top: 12px;
       resize: none;
       color: var(--skin-color);
+      font-family: 'Poppins', sans-serif;
+
       &:focus {
         outline: none;
       }
@@ -1402,6 +1519,8 @@ nav {
       padding: 15px 0;
       font-size: 18px;
       color: var(--skin-color);
+      font-family: 'Poppins', sans-serif;
+
 
       &:focus,
       &:valid {

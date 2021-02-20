@@ -159,10 +159,10 @@
         <li class="outer-shadow hover-in-shadow">
           <a href="../index.html"><i class="fas fa-home"></i> Home </a>
         </li>
-        <li class="outer-shadow hover-in-shadow active">
+        <li class="outer-shadow hover-in-shadow">
           <a href="about.html"><i class="fas fa-user-alt"></i> About</a>
         </li>
-        <li class="outer-shadow hover-in-shadow">
+        <li class="outer-shadow hover-in-shadow active">
           <a href="services.html"
           ><i class="fas fa-concierge-bell"></i> Services</a
           >
@@ -181,7 +181,17 @@
       </ul>
     </nav>
     <footer><p>Created by &copy; Aakash Garg</p></footer>
-    
+    <script src="../js/vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".gradBox"), {
+        max: 35,
+        speed: 200,
+        glare: true,
+        "max-glare": 1,
+        reverse:true,
+        scale:1.2,
+      });
+    </script>
       <script src="../particles.js"></script>
       <script src="../app.js"></script>
     <!-- main js -->
