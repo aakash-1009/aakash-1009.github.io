@@ -435,7 +435,7 @@
     <script>
       // --------------------portfolio filter and popup start-------------
       function bodyScrollingToggle() {
-        document.body.classList.toggle("stop-scrolling");
+        document.body.classList.toggle("hidden-scrolling");
       }
       (() => {
         const filterContainer = document.querySelector(".project-filter");
@@ -490,9 +490,9 @@
 
             // console.log(projectItem);
             // get the projectItem index
-            const itemIndex = Array.from(
-              projectItem.parentElement.children
-            ).indexOf(projectItem);
+            itemIndex = Array.from(projectItem.parentElement.children).indexOf(
+              projectItem
+            );
             // console.log(itemIndex);
             screenshots = projectItems[itemIndex]
               .querySelector(".project-item-img img")
@@ -518,6 +518,9 @@
         });
         ppCloseBtn.addEventListener("click", () => {
           popupToggle();
+          if (projectDetailsContainer.classList.contains("active")) {
+            popupDetailsToggle();
+          }
         });
         function popupToggle() {
           // console.log(popup);
@@ -560,11 +563,29 @@
         });
 
         function popupDetails() {
-          //get the project details
+          // if project-item-details not exists
+          if (!projectItems[itemIndex].querySelector(".project-item-details")) {
+            projectDetailsBtn.style.display = "none";
+            return; //to end fucntion execution
+          }
+          projectDetailsBtn.style.display = "block";
+          //get & set the project details
           const details = projectItems[itemIndex].querySelector(
             ".project-item-details"
           ).innerHTML;
           popup.querySelector(".pp-project-details").innerHTML = details;
+          // get & set the project title
+          const title = projectItems[itemIndex].querySelector(
+            ".project-item-title"
+          ).innerHTML;
+          popup.querySelector(".pp-title h2").innerHTML = title;
+          // get & set the project category
+          const category = projectItems[itemIndex].getAttribute(
+            "data-category"
+          );
+          popup.querySelector(
+            ".pp-project-category"
+          ).innerHTML = category.split("-").join(" ");
         }
 
         projectDetailsBtn.addEventListener("click", () => {

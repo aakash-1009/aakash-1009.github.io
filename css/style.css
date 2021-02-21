@@ -55,7 +55,7 @@ body {
   background-color: var(--bg-black-900);
 }
 
-body.stop-scrolling {
+body.hidden-scrolling {
   overflow: hidden;
 }
 
@@ -2021,6 +2021,10 @@ nav ul li.hover-in-shadow:hover::after {
   font-size: 16px;
 }
 
+.project-popup .info ul li a {
+  color: var(--skin-color);
+}
+
 .project-popup .info ul li:last-child {
   margin-bottom: 0;
 }
@@ -2045,6 +2049,11 @@ nav ul li.hover-in-shadow:hover::after {
   border-bottom: 1px solid var(--bg-black-100);
   padding-bottom: 10px;
   font-family: "Poppins", sans-serif;
+}
+
+.project-popup .pp-title p span {
+  font-weight: 400;
+  text-transform: capitalize;
 }
 
 .testimonials-container {
