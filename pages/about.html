@@ -18,9 +18,10 @@
       integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
       crossorigin="anonymous"
     ></script>
-
     <!-- main css -->
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../css/responsive.css" />
     <!-- default color skin -->
     <link rel="stylesheet" href="../css/skins/color-1.css" />
     <!-- style switcher -->
@@ -86,8 +87,8 @@
         </div>
       </div>
       <!-- -------------------LOGO END-------------------- -->
-       <!-- ------------------------style switcher start----------------- -->
-       <div class="style-switcher outer-shadow">
+      <!-- ------------------------style switcher start----------------- -->
+      <div class="style-switcher outer-shadow">
         <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
           <i class="fas fa-cog fa-spin"></i>
         </div>
@@ -150,8 +151,11 @@
           </div>
           <div class="about-info">
             <p>
-              <span>Hi! My name is Aakash Garg. I am a Web Developer.</span
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <span
+                >Hi! My name is Aakash Garg. I am a
+                <span class="typing-2"></span></span
+              ><br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Aspernatur ut exercitationem voluptas reiciendis iste magnam
               voluptate, dolorum ea. Unde minima eos quo quam! Autem dicta
               dolores optio itaque! Quidem, inventore! Accusamus assumenda
@@ -418,7 +422,7 @@
       console.log(tabsContainer);
 
       tabsContainer.addEventListener("click", (event) => {
-        console.log("hi");
+        // console.log("hi");
         if (
           event.target.classList.contains("tab-item") &&
           !event.target.classList.contains("active")
@@ -437,6 +441,14 @@
           //activate new "tab-content"
           aboutContainer.querySelector(target).classList.add("active");
         }
+      });
+    </script>
+    <script>
+      var typed = new Typed(".typing-2", {
+        strings: ["Developer", "Student", "Designer", "Freelancer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true,
       });
     </script>
     <script src="../particles.js"></script>

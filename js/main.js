@@ -14,6 +14,8 @@ var typed = new Typed(".typing", {
   backSpeed: 60,
   loop: true,
 });
+
+
 // ---------------typing animation ends-------------------
 // -------------------------home img-----------------
 const boxesContainer = document.getElementById("boxes");
@@ -26,7 +28,7 @@ function createBoxes() {
     for (let j = 0; j < 4; j++) {
       const box = document.createElement("div");
       box.classList.add("box");
-      box.style.backgroundPosition = `${-j * 75}px ${-i * 75}px`;
+      box.style.backgroundPosition = `${-j * 65}px ${-i * 65}px`;
       boxesContainer.appendChild(box);
     }
   }
@@ -45,4 +47,3 @@ letters.forEach((item) => {
   });
 });
 // -------------------hover animation ends------------------------
-
