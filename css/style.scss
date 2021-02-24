@@ -7,6 +7,11 @@
   src: url("myfont.ttf");
   font-weight: 600;
 }
+@font-face {
+  font-family: "navFont";
+  src: url("navFont.otf");
+  font-weight: 700;
+}
 
 /*----------------- global style------------------ */
 // define custom css variables
@@ -37,7 +42,7 @@ canvas {
   --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
 }
 // override custom css variables for dark theme
-body.dark{
+body.dark {
   --bg-black-900: #ffffff;
   --bg-black-100: #353535;
   --bg-black-50: #2b2c2f;
@@ -378,6 +383,113 @@ img {
   display: inline-block;
   transition: all 0.3s ease-out;
 }
+.nav-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#open-btn.open-btn {
+  position: fixed;
+  top: 50%;
+  left: 55%;
+  font-size: 30px;
+  display: none;
+  i::before {
+    top: 25%;
+    left: 25%;
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  display: none;
+  &.visible {
+    transform: translateX(0);
+  }
+}
+
+.nav-black {
+  background-color: var(--bg-black-900);
+  width: 60%;
+  max-width: 480px;
+  min-width: 320px;
+  transition-delay: 0.4s;
+  &.visible {
+    transition-delay: 0s;
+  }
+  .nav-red {
+    background-color: var(--skin-color);
+    width: 95%;
+    transition-delay: 0.2s;
+    &.visible {
+      transition-delay: 0.2s;
+    }
+    .nav-white {
+      background-color: var(--bg-black-50);
+      width: 95%;
+      padding: 30px;
+      position: relative;
+      transition-delay: 0s;
+      &.visible {
+        transition-delay: 0.4s;
+      }
+      .mLogo {
+        font-size: 29px;
+        color: var(--bg-black-900);
+
+        .greyClass {
+          color: var(--text-black-700);
+          font-weight: 500;
+        }
+        .text {
+          font-weight: 700;
+          font-family: "navFont";
+        }
+      }
+
+      .close-btn {
+        opacity: 0.5;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        color: var(--bg-black-900);
+      }
+
+      .list {
+        list-style-type: none;
+        padding: 0;
+        // font-family: ;
+        li {
+          margin: 20px 0;
+          &.active {
+            a {
+              color: var(--skin-color);
+            }
+          }
+          a {
+            color: var(--text-black-700);
+            font-size: 14px;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .list ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
 // ------------------SMOKE TEXT----------------
 .smoke {
   height: 20vh;
@@ -401,7 +513,6 @@ img {
   h2.smokeText {
     position: absolute;
     top: 5%;
-    transform: translateX(-61%);
     width: 100%;
     text-align: center;
     color: #fff;
@@ -458,6 +569,9 @@ img {
   flex: 0 0 100%;
   max-width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
 
   h2 {
     display: inline-block;
@@ -884,7 +998,7 @@ nav {
     span {
       font-weight: 600;
       font-size: 20px;
-      span.typing-2{
+      span.typing-2 {
         color: var(--skin-color);
       }
     }
@@ -1016,6 +1130,7 @@ nav {
           display: flex;
           justify-content: center;
           align-items: center;
+          flex-direction: column;
           text-decoration: none;
           color: var(--text-black-600);
           font-size: 4.5em;
@@ -1045,6 +1160,11 @@ nav {
           }
           &:hover::before {
             transform: skewX(45deg) translateX(-170px);
+          }
+
+          span {
+            font-size: 16px;
+            margin-top: 10px;
           }
         }
       }
@@ -1405,7 +1525,7 @@ nav {
     align-items: center;
     visibility: hidden;
     opacity: 0;
-    &.active{
+    &.active {
       visibility: visible;
       opacity: 1;
     }
@@ -1521,7 +1641,7 @@ nav {
     overflow: hidden;
     opacity: 0;
     transition: all 0.7s ease;
-    &.active{
+    &.active {
       opacity: 1;
     }
 
@@ -1562,7 +1682,7 @@ nav {
       font-weight: 600;
       color: var(--text-black-600);
       font-size: 16px;
-      a{
+      a {
         color: var(--skin-color);
       }
       &:last-child {
@@ -1588,7 +1708,7 @@ nav {
       border-bottom: 1px solid var(--bg-black-100);
       padding-bottom: 10px;
       font-family: "Poppins", sans-serif;
-      span{
+      span {
         font-weight: 400;
         text-transform: capitalize;
       }

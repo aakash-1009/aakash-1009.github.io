@@ -130,6 +130,16 @@
       max-width: 100%;
     }
   }
+  .nav {
+    display: block;
+    z-index: 100;
+  }
+  #open {
+    display: none;
+  }
+  #open-btn.open-btn {
+    display: block;
+  }
 }
 @media (max-width: 574px) {
   .home-container {
@@ -169,6 +179,9 @@
       flex: 0 0 100%;
       max-width: 100%;
     }
+  }
+  .nav-black .nav-red .nav-white .mLogo {
+    font-size: 24px;
   }
 }
 @media (max-width: 499px) {

@@ -20,6 +20,8 @@
     ></script>
     <!-- main css -->
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
+     <!-- responsive css -->
+     <link rel="stylesheet" href="../css/responsive.css" />
     <!-- default color skin -->
     <link rel="stylesheet" href="../css/skins/color-1.css" />
     <!-- --------swiper.js----- -->
@@ -73,6 +75,9 @@
       <div class="container">
         <div class="circle-container">
           <div class="circle">
+            <button class="nav-btn open-btn" id="open-btn">
+              <i class="fas fa-bars outer-shadow hover-in-shadow"></i>
+            </button>
             <button id="close">
               <i class="fas fa-times outer-shadow hover-in-shadow"></i>
             </button>
@@ -263,10 +268,60 @@
             <div class="swiper-pagination"></div>
           </div>
         </div>
+        <div class="nav nav-black">
+          <div class="nav nav-red">
+            <div class="nav nav-white">
+              <button class="nav-btn close-btn">
+                <i class="fas fa-times"></i>
+              </button>
+
+              <div class="mLogo">
+                <span class="greyClass"><</span>
+                <span class="text">Aakash Garg</span>
+                <span class="greyClass">/></span>
+              </div>
+
+              <ul class="list">
+                <li>
+                  <a href="../index.html"><i class="fas fa-home"></i> Home </a>
+                </li>
+                <li>
+                  <a href="about.html"
+                    ><i class="fas fa-user-alt"></i> About</a
+                  >
+                  <ul>
+                    <li><a href="about.html#about-tabs">Skills</a></li>
+                    <li><a href="about.html#about-tabs">Experience</a></li>
+                    <li><a href="about.html#about-tabs">Education</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="services.html"
+                    ><i class="fas fa-concierge-bell"></i> Services</a
+                  >
+                </li>
+                <li>
+                  <a href="projects.html">
+                    <i class="fas fa-tasks"></i> Projects</a
+                  >
+                </li>
+                <li>
+                  <a href="contact.html">
+                    <i class="fas fa-envelope"></i> Contact</a
+                  >
+                </li>
+                <li class="active">
+                  <a href="testimonials.html"
+                    ><i class="fas fa-comments"></i>Testimonials</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- -------------HEADER/HOME END----------------- -->
-    <!-- navlink a not working due to after on a  -->
     <nav>
       <ul>
         <li class="outer-shadow hover-in-shadow">

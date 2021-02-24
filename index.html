@@ -21,7 +21,7 @@
     <!-- main css -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive.css" />
     <!-- default color skin -->
     <link rel="stylesheet" href="css/skins/color-1.css" />
     <!-- style switcher -->
@@ -106,6 +106,9 @@
       <div class="container">
         <div class="circle-container">
           <div class="circle">
+            <button class="nav-btn open-btn" id="open-btn">
+              <i class="fas fa-bars outer-shadow hover-in-shadow"></i>
+            </button>
             <button id="close">
               <i class="fas fa-times outer-shadow hover-in-shadow"></i>
             </button>
@@ -196,6 +199,58 @@
               <div id="boxes" class="boxes big"></div>
             </div>
           </div>
+
+          <div class="nav nav-black">
+            <div class="nav nav-red">
+              <div class="nav nav-white">
+                <button class="nav-btn close-btn">
+                  <i class="fas fa-times"></i>
+                </button>
+
+                <div class="mLogo">
+                  <span class="greyClass"><</span>
+                  <span class="text">Aakash Garg</span>
+                  <span class="greyClass">/></span>
+                </div>
+
+                <ul class="list">
+                  <li class="active">
+                    <a href="index.html"><i class="fas fa-home"></i> Home </a>
+                  </li>
+                  <li>
+                    <a href="pages/about.html"
+                      ><i class="fas fa-user-alt"></i> About</a
+                    >
+                    <ul>
+                      <li><a href="pages/about.html#about-tabs">Skills</a></li>
+                      <li><a href="pages/about.html#about-tabs">Experience</a></li>
+                      <li><a href="pages/about.html#about-tabs">Education</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="pages/services.html"
+                      ><i class="fas fa-concierge-bell"></i> Services</a
+                    >
+                  </li>
+                  <li>
+                    <a href="pages/projects.html">
+                      <i class="fas fa-tasks"></i> Projects</a
+                    >
+                  </li>
+                  <li>
+                    <a href="pages/contact.html">
+                      <i class="fas fa-envelope"></i> Contact</a
+                    >
+                  </li>
+                  <li>
+                    <a href="pages/testimonials.html"
+                      ><i class="fas fa-comments"></i>Testimonials</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -204,7 +259,7 @@
     <nav>
       <ul>
         <li class="outer-shadow hover-in-shadow active">
-          <a href="pages/index.html"><i class="fas fa-home"></i> Home </a>
+          <a href="index.html"><i class="fas fa-home"></i> Home </a>
         </li>
         <li class="outer-shadow hover-in-shadow">
           <a href="pages/about.html"><i class="fas fa-user-alt"></i> About</a>

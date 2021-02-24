@@ -5,6 +5,12 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: "navFont";
+  src: url("navFont.otf");
+  font-weight: 700;
+}
+
 /*----------------- global style------------------ */
 canvas {
   display: block;
@@ -538,6 +544,133 @@ img {
   transition: all 0.3s ease-out;
 }
 
+.nav-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#open-btn.open-btn {
+  position: fixed;
+  top: 50%;
+  left: 55%;
+  font-size: 30px;
+  display: none;
+}
+
+#open-btn.open-btn i::before {
+  top: 25%;
+  left: 25%;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  display: none;
+}
+
+.nav.visible {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav-black {
+  background-color: var(--bg-black-900);
+  width: 60%;
+  max-width: 480px;
+  min-width: 320px;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.nav-black.visible {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.nav-black .nav-red {
+  background-color: var(--skin-color);
+  width: 95%;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.nav-black .nav-red.visible {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.nav-black .nav-red .nav-white {
+  background-color: var(--bg-black-50);
+  width: 95%;
+  padding: 30px;
+  position: relative;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.nav-black .nav-red .nav-white.visible {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.nav-black .nav-red .nav-white .mLogo {
+  font-size: 29px;
+  color: var(--bg-black-900);
+}
+
+.nav-black .nav-red .nav-white .mLogo .greyClass {
+  color: var(--text-black-700);
+  font-weight: 500;
+}
+
+.nav-black .nav-red .nav-white .mLogo .text {
+  font-weight: 700;
+  font-family: "navFont";
+}
+
+.nav-black .nav-red .nav-white .close-btn {
+  opacity: 0.5;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  color: var(--bg-black-900);
+}
+
+.nav-black .nav-red .nav-white .list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-black .nav-red .nav-white .list li {
+  margin: 20px 0;
+}
+
+.nav-black .nav-red .nav-white .list li.active a {
+  color: var(--skin-color);
+}
+
+.nav-black .nav-red .nav-white .list li a {
+  color: var(--text-black-700);
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-black .nav-red .nav-white .list ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
 .smoke {
   height: 20vh;
   position: relative;
@@ -562,8 +695,6 @@ img {
 .smoke h2.smokeText {
   position: absolute;
   top: 5%;
-  -webkit-transform: translateX(-61%);
-          transform: translateX(-61%);
   width: 100%;
   text-align: center;
   color: #fff;
@@ -659,6 +790,13 @@ img {
           flex: 0 0 100%;
   max-width: 100%;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
 .section-title h2 {
@@ -1368,6 +1506,10 @@ nav ul li.hover-in-shadow:hover::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-decoration: none;
   color: var(--text-black-600);
   font-size: 4.5em;
@@ -1406,6 +1548,11 @@ nav ul li.hover-in-shadow:hover::after {
 .about-container .skills ul li a:hover::before {
   -webkit-transform: skewX(45deg) translateX(-170px);
           transform: skewX(45deg) translateX(-170px);
+}
+
+.about-container .skills ul li a span {
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 .about-container .experience,
