@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Personal Portfolio Website</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="google-site-verification" content="Hxxf8v7qSN_TE_G2zfjQXAda93iyQ3vddXkSP4CjduU" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -62,7 +64,21 @@
     <link rel="stylesheet" href="css/style-switcher.css" />
   </head>
 
-  <body>
+  <body class="dark">
+    <!-- ---------custom cursors starts----------------- -->
+    <div class="cursor"></div>
+    <div class="cursor-lazy"></div>
+<div class="progressBar"></div>
+    <!-- ---------custom cursors endss----------------- -->
+    <!-- ----------------preloader start----------------- -->
+    <div class="preloader">
+      <div class="preloader-box">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- ----------------preloader ends----------------- -->
     <!-- ************************HEADER/HOME START******************* -->
     <section class="header home" id="home">
       <!-- ------------effect wrap start------------------ -->
@@ -167,7 +183,7 @@
               <span class="blast">k</span>
               <span class="blast">a</span>
               <span class="blast">s</span>
-              <span class="blast">h&nbsp;&nbsp;</span>
+              <span class="blast">h</span>&nbsp;&nbsp;
               <span class="blast"> G</span>
               <span class="blast">a</span>
               <span class="blast">r</span>
@@ -182,7 +198,9 @@
               <span class="blast">m&nbsp;&nbsp; </span>
               <span class="typing"></span>
             </div>
-            <a href="#" class="btn-1 hover-in-shadow outer-shadow"
+            <a
+              href="pages/about.html"
+              class="btn-1 hover-in-shadow outer-shadow"
               >More about Me</a
             >
           </div>
@@ -196,6 +214,7 @@
                 <span></span>
                 Click Me!</a
               >
+              <div class="computerImg"><img src="/img/RESIZE undraw.svg" alt=""></div>
               <div id="boxes" class="boxes big"></div>
             </div>
           </div>
@@ -209,7 +228,7 @@
 
                 <div class="mLogo">
                   <span class="greyClass"><</span>
-                  <span class="text">Aakash Garg</span>
+                  <span class="text">Aakash Garg </span>
                   <span class="greyClass">/></span>
                 </div>
 
@@ -223,8 +242,12 @@
                     >
                     <ul>
                       <li><a href="pages/about.html#about-tabs">Skills</a></li>
-                      <li><a href="pages/about.html#about-tabs">Experience</a></li>
-                      <li><a href="pages/about.html#about-tabs">Education</a></li>
+                      <li>
+                        <a href="pages/about.html#about-tabs">Experience</a>
+                      </li>
+                      <li>
+                        <a href="pages/about.html#about-tabs">Education</a>
+                      </li>
                     </ul>
                   </li>
                   <li>
@@ -242,11 +265,11 @@
                       <i class="fas fa-envelope"></i> Contact</a
                     >
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="pages/testimonials.html"
                       ><i class="fas fa-comments"></i>Testimonials</a
                     >
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -279,11 +302,11 @@
             ><i class="fas fa-envelope"></i> Contact</a
           >
         </li>
-        <li class="outer-shadow hover-in-shadow">
+        <!-- <li class="outer-shadow hover-in-shadow">
           <a href="#testimonials.html"
             ><i class="fas fa-comments"></i>Testimonials</a
           >
-        </li>
+        </li> -->
       </ul>
     </nav>
 

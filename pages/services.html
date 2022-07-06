@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Personal Portfolio Website</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -63,6 +64,18 @@
   </head>
 
   <body>
+     <!-- ---------custom cursors starts----------------- -->
+     <div class="cursor"></div>
+     <div class="cursor-lazy"></div>
+     <div class="progressBar"></div>
+     <!-- ---------custom cursors endss----------------- -->
+    <!-- ----------------preloader start----------------- -->
+    <div class="preloader">
+      <div class="preloader-box">
+        <div></div><div></div><div></div>
+      </div>
+    </div>
+    <!-- ----------------preloader ends----------------- -->
     <!-- ************************HEADER/ABOUT START******************* -->
     <section class="header services" id="services">
       <div id="particles-js"></div>
@@ -142,9 +155,7 @@
                 </div>
                 <h2>Web Design</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Cupiditate possimus maxime provident dignissimos facilis
-                  aperiam omnis odio
+                  I value simple content structure, clean design patterns, and thoughtful interactions.
                 </p>
               </div>
             </div>
@@ -156,9 +167,7 @@
                 </div>
                 <h2>Responsive Design</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Cupiditate possimus maxime provident dignissimos facilis
-                  aperiam omnis odio
+                  Having a responsive layout means that website fluidly resizes for optimal viewing regardless of the screen size or device (e.g. iPhone, iPad).
                 </p>
               </div>
             </div>
@@ -168,9 +177,7 @@
                 <div class="icon outer-shadow"><i class="fas fa-code"></i></div>
                 <h2>Clean Code</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Cupiditate possimus maxime provident dignissimos facilis
-                  aperiam omnis odio
+                  I like to code things from scratch, and enjoy bringing ideas to life in the browser.
                 </p>
               </div>
             </div>
@@ -182,13 +189,11 @@
                 </div>
                 <h2>Graphic Design</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Cupiditate possimus maxime provident dignissimos facilis
-                  aperiam omnis odio
+                  My goal is to design a professional yet creative designs that reflects your company’s spirit and leaves a lasting, memorable effect.
                 </p>
               </div>
             </div>
-            <div class="gradBox">
+            <!-- <div class="gradBox">
               <span></span>
               <div class="gradBoxContent">
                 <div class="icon outer-shadow">
@@ -196,23 +201,19 @@
                 </div>
                 <h2>SEO Marketing</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Cupiditate possimus maxime provident dignissimos facilis
-                  aperiam omnis odio
+                  I offer customised SEO (Search Engine Optimisation) to ensure your website is rising the ranks in Google and staying at the top.
                 </p>
               </div>
-            </div>
+            </div> -->
             <div class="gradBox">
               <span></span>
               <div class="gradBoxContent">
                 <div class="icon outer-shadow">
-                  <i class="fas fa-bullhorn"></i>
+                  <i class="far fa-thumbs-up"></i>
                 </div>
-                <h2>Great Support</h2>
+                <h2>Social Media Integration</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Cupiditate possimus maxime provident dignissimos facilis
-                  aperiam omnis odio
+                  It enables your website to post updates to Facebook, displays a Twitter feed, and links to your social media accounts.
                 </p>
               </div>
             </div>
@@ -228,7 +229,7 @@
 
               <div class="mLogo">
                 <span class="greyClass"><</span>
-                <span class="text">Aakash Garg</span>
+                <span class="text">Aakash Garg </span>
                 <span class="greyClass">/></span>
               </div>
 
@@ -237,9 +238,7 @@
                   <a href="../index.html"><i class="fas fa-home"></i> Home </a>
                 </li>
                 <li>
-                  <a href="about.html"
-                    ><i class="fas fa-user-alt"></i> About</a
-                  >
+                  <a href="about.html"><i class="fas fa-user-alt"></i> About</a>
                   <ul>
                     <li><a href="about.html#about-tabs">Skills</a></li>
                     <li><a href="about.html#about-tabs">Experience</a></li>
@@ -261,11 +260,11 @@
                     <i class="fas fa-envelope"></i> Contact</a
                   >
                 </li>
-                <li>
+                <!-- <li>
                   <a href="testimonials.html"
                     ><i class="fas fa-comments"></i>Testimonials</a
                   >
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
@@ -293,24 +292,44 @@
         <li class="outer-shadow hover-in-shadow">
           <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
         </li>
-        <li class="outer-shadow hover-in-shadow">
+        <!-- <li class="outer-shadow hover-in-shadow">
           <a href="testimonials.html"
             ><i class="fas fa-comments"></i>Testimonials</a
           >
-        </li>
+        </li> -->
       </ul>
     </nav>
     <footer><p>Created by &copy; Aakash Garg</p></footer>
     <script src="../js/vanilla-tilt.js"></script>
+
     <script>
-      VanillaTilt.init(document.querySelectorAll(".gradBox"), {
-        max: 35,
-        speed: 200,
-        glare: true,
-        "max-glare": 1,
-        reverse: true,
-        scale: 1.2,
-      });
+      // -------------------------tilt effect---------------------
+      let newQuery = window.matchMedia(" ( max-width: 555px ) ");
+
+      const queryListenChanges = (query) => {
+        if (query.matches) {
+          VanillaTilt.init(document.querySelectorAll(".gradBox"), {
+            max: 20,
+            speed: 200,
+            glare: true,
+            "max-glare": 0.8,
+            reverse: true,
+            scale: 0.8,
+          });
+        } else {
+          VanillaTilt.init(document.querySelectorAll(".gradBox"), {
+            max: 20,
+            speed: 200,
+            glare: true,
+            "max-glare": 0.8,
+            reverse: true,
+            scale: 1.2,
+          });
+        }
+      };
+
+      queryListenChanges(newQuery);
+      newQuery.addListener(queryListenChanges);
     </script>
     <script src="../particles.js"></script>
     <script src="../app.js"></script>

@@ -158,15 +158,30 @@
     .about-info {
       flex: 0 0 100%;
       max-width: 100%;
+      padding: 0;
     }
     .about-img {
       flex: 0 0 100%;
       max-width: 100%;
-      padding: 30px;
+      padding: 30px 10px;
     }
     .timeline .timeline-item:nth-child(odd) {
       padding-right: 15px;
       text-align: left;
+    }
+    .skills {
+      ul {
+        li {
+          margin: 6px;
+          a {
+            height: 135px;
+            width: 135px;
+            &::before{
+              background: var(--skin-color);
+            }
+          }
+        }
+      }
     }
   }
   .services-container {
@@ -178,8 +193,10 @@
     .project-item {
       flex: 0 0 100%;
       max-width: 100%;
+      // transform: scale3d(0.9, 0.9, 0.9) !important;
     }
   }
+ 
   .nav-black .nav-red .nav-white .mLogo {
     font-size: 24px;
   }

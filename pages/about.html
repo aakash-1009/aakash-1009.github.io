@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Personal Portfolio Website</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="Hxxf8v7qSN_TE_G2zfjQXAda93iyQ3vddXkSP4CjduU"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -63,6 +68,20 @@
   </head>
 
   <body>
+    <!-- ---------custom cursors starts----------------- -->
+    <div class="cursor"></div>
+    <div class="cursor-lazy"></div>
+    <div class="progressBar"></div>
+    <!-- ---------custom cursors endss----------------- -->
+    <!-- ----------------preloader start----------------- -->
+    <div class="preloader">
+      <div class="preloader-box">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- ----------------preloader ends----------------- -->
     <!-- ************************HEADER/ABOUT START******************* -->
     <section class="header about" id="about">
       <div id="particles-js"></div>
@@ -142,41 +161,51 @@
             </div>
             <!-- ----------social links start------------- -->
             <div class="social-links">
-              <a href="" class="socialIcons"><i class="fab fa-twitter"></i></a>
-              <a href="" class="socialIcons"><i class="fab fa-reddit"></i></a>
-              <a href="" class="socialIcons"><i class="fab fa-medium"></i></a>
-              <a href="" class="socialIcons"><i class="fab fa-vimeo"></i></a>
-              <a href="" class="socialIcons"
-                ><i class="fab fa-pinterest"></i
+              <a href="https://twitter.com/Aakash_1009" class="socialIcons"
+                ><i class="fab fa-twitter"></i
               ></a>
+              <a
+                href="https://www.instagram.com/_aakash.garg/"
+                class="socialIcons"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/aakash-garg-2b3671220/"
+                class="socialIcons"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://github.com/aakash-garg10" class="socialIcons"
+                ><i class="fab fa-github"></i
+              ></a>
+              <!-- <a href="" class="socialIcons"><i class="fab fa-pinterest"></i></a> -->
             </div>
             <!-- ----------social links ends------------- -->
           </div>
           <div class="about-info">
             <p>
               <span
-                >Hi! My name is Aakash Garg. I am a
-                <span class="typing-2"></span></span
+                >Hi ! My name is
+                <span class="myName" style="font-family: 'navFont'"
+                  >Aakash Garg</span
+                >. <br />
+                I am a <span class="typing-2"></span></span
               ><br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur ut exercitationem voluptas reiciendis iste magnam
-              voluptate, dolorum ea. Unde minima eos quo quam! Autem dicta
-              dolores optio itaque! Quidem, inventore! Accusamus assumenda
-              aliquam omnis iste, accusantium rerum porro ratione rem beatae in
-              repellat minima doloremque sequi deleniti iusto error explicabo
-              pariatur qui odit. Error est numquam doloribus, nulla ex animi.
+              I'm a Full-Stack Developer in UP, India. I have serious passion
+              for UI effects, animations and creating intuitive, dynamic user
+              experiences. I’ve always sought out opportunities and challenges
+              that are meaningful to me.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ea,
-              molestias tempore labore non iure? Expedita facere corrupti atque
-              nulla possimus esse beatae! Ullam fugit, a quod magnam qui
-              ratione!
+              As a web developer, I enjoy using my obsessive attention to
+              detail, my unequivocal love for making things, and my
+              mission-driven work ethic to literally change the world. That's
+              why I’m excited to make a big impact at a high growth company.
             </p>
             <div class="glassBtn">
-              <a href="../cv.pdf" class="">Download CV</a>
+              <a href="../resume.pdf" class="">Resume</a>
             </div>
             <div class="glassBtn">
-              <a href="#" class="">Hire Me</a>
+              <a href="contact.html" class="">Contact Me</a>
             </div>
           </div>
         </div>
@@ -197,76 +226,96 @@
             <div class="row">
               <ul>
                 <li>
-                  <a href="" class="skillsIcons"
+                  <a class="skillsIcons"
                     ><i class="fab fa-cuttlefish"></i> <span>C</span></a
                   >
                 </li>
                 <li>
-                  <a href="" class="skillsIcons"
+                  <a class="skillsIcons"
                     ><i class="fab fa-css3-alt"></i><span>CSS-3</span></a
                   >
                 </li>
                 <li>
-                  <a href="" class="skillsIcons"
+                  <a class="skillsIcons"
                     ><i class="fab fa-html5"></i><span>HTML-5</span></a
                   >
                 </li>
                 <li>
-                  <a href="" class="skillsIcons"
+                  <a class="skillsIcons"
                     ><i class="fab fa-js-square"></i><span>Javascript</span></a
                   >
                 </li>
                 <li>
-                  <a href="" class="skillsIcons"
+                  <a class="skillsIcons"
                     ><i class="fab fa-python"></i><span>Python</span></a
                   >
                 </li>
                 <li>
-                  <a href="" class="skillsIcons"
+                  <a class="skillsIcons"
                     ><i class="fab fa-bootstrap"></i><span>Bootstrap</span></a
                   >
                 </li>
                 <li>
-                  <a href="" class="skillsIcons"
+                  <a class="skillsIcons"
                     ><i class="fab fa-node"></i><span>NodeJS</span></a
                   >
                 </li>
-                <li>
-                  <a href="" class="skillsIcons"
+                <!-- <li>
+                  <a  class="skillsIcons"
                     ><i class="fab fa-wordpress"></i><span>Wordpress</span></a
                   >
-                </li>
+                </li> -->
                 <li>
-                  <a href="" class="skillsIcons"
+                  <a class="skillsIcons"
                     ><i class="fab fa-react"></i> <span>ReactJS</span></a
                   >
                 </li>
                 <li>
-                  <a href="" class="skillsIcons"
+                  <a class="skillsIcons"
                     ><i class="fab fa-figma"></i><span>Figma</span>
                   </a>
                 </li>
                 <li>
-                  <a href="" class="skillsIcons"
-                    ><i class="fab fa-github"></i
-                  ><span>Github</span></a>
+                  <a class="skillsIcons"
+                    ><i class="fab fa-github"></i><span>Github</span></a
+                  >
                 </li>
                 <li>
-                  <a href="" class="skillsIcons"><i class="fas fa-fire"></i><span>Firebase</span></a>
+                  <a class="skillsIcons"
+                    ><i class="fas fa-fire"></i><span>Firebase</span></a
+                  >
                 </li>
                 <li>
-                  <a href="" class="skillsIcons"><i class="fab fa-npm"></i><span>NPM</span></a>
+                  <a class="skillsIcons"
+                    ><i class="fab fa-npm"></i><span>NPM</span></a
+                  >
                 </li>
                 <li>
-                  <a href="" class="skillsIcons"
-                    ><i class="fas fa-database"></i
-                  ><span>SQL Database</span></a>
+                  <a class="skillsIcons"
+                    ><i class="fas fa-database"></i><span>SQL Database</span></a
+                  >
                 </li>
                 <li>
-                  <a href="" class="skillsIcons"
-                    ><i class="fab fa-figma"></i
-                  ></a>
+                  <a class="skillsIcons"
+                    ><i class="fab fa-sass"></i><span>Sass</span></a
+                  >
                 </li>
+                <li>
+                  <a class="skillsIcons"
+                    ><i class="fab fa-envira"></i><span>MongoDb</span></a
+                  >
+                </li>
+
+                <!-- <li>
+                  <a class="skillsIcons"
+                    ><i class="fab fa-java"></i><span>Java</span></a
+                  >
+                </li>
+                <li>
+                  <a class="skillsIcons"
+                    ><i class="fab fa-php"></i><span>Php</span></a
+                  >
+                </li> -->
               </ul>
             </div>
           </div>
@@ -282,13 +331,13 @@
                   <div class="timeline-item">
                     <div class="timeline-item-inner outer-shadow">
                       <i class="fas fa-briefcase icon"></i>
-                      <span>Oct,2019 - present</span>
-                      <h3>Full Stack Developer</h3>
-                      <h4>Company Name,india</h4>
+                      <span>Mar,2022 - Mar,2022</span>
+                      <h3>Freelancer</h3>
+                      <h4>OQPAI</h4>
                       <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Hic laboriosam totam suscipit. Recusandae aliquam
-                        obcaecati eaque alias
+                        Worked the main website of the organization. Did few
+                        changes in the home page and created the contact and
+                        about page.
                       </p>
                     </div>
                   </div>
@@ -297,13 +346,13 @@
                   <div class="timeline-item">
                     <div class="timeline-item-inner outer-shadow">
                       <i class="fas fa-briefcase icon"></i>
-                      <span>Oct,2016 - Oct-2019</span>
-                      <h3>Web designer</h3>
-                      <h4>Company Name,india</h4>
+                      <span>Nov,2021 - Dec,2021</span>
+                      <h3>Frontend Developer</h3>
+                      <h4>Sfity,India</h4>
                       <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Hic laboriosam totam suscipit. Recusandae aliquam
-                        obcaecati eaque alias
+                        Created the entire frontend of the website using HTML,
+                        CSS and JS from the provided Figma file. It was a travel
+                        website consisting of several pages.
                       </p>
                     </div>
                   </div>
@@ -312,13 +361,27 @@
                   <div class="timeline-item">
                     <div class="timeline-item-inner outer-shadow">
                       <i class="fas fa-briefcase icon"></i>
-                      <span>Oct,2015 - oct,2016</span>
-                      <h3>web designer</h3>
-                      <h4>Company Name,india</h4>
+                      <span>Oct,2021 - Oct-2021</span>
+                      <h3>Frontend Develeoper</h3>
+                      <h4>TCS iON</h4>
                       <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Hic laboriosam totam suscipit. Recusandae aliquam
-                        obcaecati eaque alias
+                        A template of a single page website was provided which
+                        had to be completed and submitted before the deadline
+                      </p>
+                    </div>
+                  </div>
+                  <!-- ----------------timeline item end------------- -->
+                  <!-- ----------------timeline item start------------- -->
+                  <div class="timeline-item">
+                    <div class="timeline-item-inner outer-shadow">
+                      <i class="fas fa-briefcase icon"></i>
+                      <span>May,2020 - June,2020</span>
+                      <h3>Web developer</h3>
+                      <h4>Verzeo in collaboration with E-Cell /IIT KGP</h4>
+                      <p>
+                        A 2 month long training cum internship. In the 1st month
+                        we were provided training and in the 2nd month we had to
+                        submit a minor as well as a major project
                       </p>
                     </div>
                   </div>
@@ -343,9 +406,9 @@
                       <h3>B.Tech in Information Technology</h3>
 
                       <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Hic laboriosam totam suscipit. Recusandae aliquam
-                        obcaecati eaque alias
+                        Pursuing B.tech from Ajay Kumar Garg Engineering
+                        College, Uttar Pradesh. with a
+                        <b style="color: white"> CGPA 9</b> until now.
                       </p>
                     </div>
                   </div>
@@ -357,9 +420,9 @@
                       <span>2018</span>
                       <h3>Intemediate</h3>
                       <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Hic laboriosam totam suscipit. Recusandae aliquam
-                        obcaecati eaque alias
+                        Completed with a total aggregate of
+                        <strong style="color: white"> 88% </strong> from
+                        Dehradun Public School (DDPS) Ghaziabad, UP.
                       </p>
                     </div>
                   </div>
@@ -371,9 +434,9 @@
                       <span>2016</span>
                       <h3>High school</h3>
                       <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Hic laboriosam totam suscipit. Recusandae aliquam
-                        obcaecati eaque alias
+                        Completed with a total aggregate of
+                        <strong style="color: white"> 95% or CGPA-10 </strong>
+                        from Dehradun Public School (DDPS) Ghaziabad, UP.
                       </p>
                     </div>
                   </div>
@@ -394,18 +457,16 @@
 
               <div class="mLogo">
                 <span class="greyClass"><</span>
-                <span class="text">Aakash Garg</span>
+                <span class="text">Aakash Garg </span>
                 <span class="greyClass">/></span>
               </div>
 
               <ul class="list">
-                <li >
+                <li>
                   <a href="../index.html"><i class="fas fa-home"></i> Home </a>
                 </li>
                 <li class="active">
-                  <a href="about.html"
-                    ><i class="fas fa-user-alt"></i> About</a
-                  >
+                  <a href="about.html"><i class="fas fa-user-alt"></i> About</a>
                   <ul>
                     <li><a href="#about-tabs">Skills</a></li>
                     <li><a href="#about-tabs">Experience</a></li>
@@ -427,11 +488,11 @@
                     <i class="fas fa-envelope"></i> Contact</a
                   >
                 </li>
-                <li>
+                <!-- <li>
                   <a href="testimonials.html"
                     ><i class="fas fa-comments"></i>Testimonials</a
                   >
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
@@ -439,7 +500,6 @@
       </div>
     </section>
     <!-- -------------HEADER/HOME END----------------- -->
-    <!-- navlink a not working due to after on a  -->
     <nav>
       <ul>
         <li class="outer-shadow hover-in-shadow">
@@ -459,11 +519,11 @@
         <li class="outer-shadow hover-in-shadow">
           <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
         </li>
-        <li class="outer-shadow hover-in-shadow">
+        <!-- <li class="outer-shadow hover-in-shadow">
           <a href="testimonials.html"
             ><i class="fas fa-comments"></i>Testimonials</a
           >
-        </li>
+        </li> -->
       </ul>
     </nav>
     <footer><p>Created by &copy; Aakash Garg</p></footer>

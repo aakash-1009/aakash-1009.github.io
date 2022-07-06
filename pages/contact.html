@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Personal Portfolio Website</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="google-site-verification" content="Hxxf8v7qSN_TE_G2zfjQXAda93iyQ3vddXkSP4CjduU" />
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -63,6 +65,20 @@
   </head>
 
   <body>
+    <!-- ---------custom cursors starts----------------- -->
+    <div class="cursor"></div>
+    <div class="cursor-lazy"></div>
+    <div class="progressBar"></div>
+    <!-- ---------custom cursors endss----------------- -->
+    <!-- ----------------preloader start----------------- -->
+    <div class="preloader">
+      <div class="preloader-box">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- ----------------preloader ends----------------- -->
     <!-- ************************HEADER/ABOUT START******************* -->
     <section class="header contact" id="contact">
       <div id="particles-js"></div>
@@ -90,8 +106,8 @@
         </div>
       </div>
       <!-- -------------------LOGO END-------------------- -->
-       <!-- ------------------------style switcher start----------------- -->
-       <div class="style-switcher outer-shadow">
+      <!-- ------------------------style switcher start----------------- -->
+      <div class="style-switcher outer-shadow">
         <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
           <i class="fas fa-cog fa-spin"></i>
         </div>
@@ -136,7 +152,7 @@
             <div class="contact-item-inner outer-shadow">
               <i class="fas fa-phone"></i>
               <span>Phone</span>
-              <p>123 456 7890</p>
+              <p>0123 456 789</p>
             </div>
           </div>
           <!-- ---------------contact item end-------------- -->
@@ -145,7 +161,7 @@
             <div class="contact-item-inner outer-shadow">
               <i class="fas fa-envelope"></i>
               <span>Email</span>
-              <p>aakash@gmail.com</p>
+              <p>aakash1913193@akgec.ac.in</p>
             </div>
           </div>
           <!-- ---------------contact item end-------------- -->
@@ -155,8 +171,8 @@
               <i class="fas fa-map-marker-alt"></i>
               <span>Address</span>
               <p>
-                564 Gayatri Tower, Ghaziabad
-                longwordthatisoutoftheboundgoesherefsdaafdafd
+                Ghaziabad , UP , India <br />
+                201002
               </p>
             </div>
           </div>
@@ -164,20 +180,20 @@
         </div>
         <div class="row">
           <div class="contact-form">
-            <form action="">
+            <form action="#" class="contactForm">
               <div class="row">
                 <div class="w-50">
                   <div class="form-control">
-                    <input type="text" required />
+                    <input type="text" id="name" name="name" required />
                     <label>Name</label>
                   </div>
                   <div class="form-control">
-                    <input type="text" required />
+                    <input type="email" id="email" name="email" required />
                     <label>Email</label>
                   </div>
 
                   <div class="form-control">
-                    <input type="text" required />
+                    <input type="text" id="subject" name="subject" required />
                     <label>Subject</label>
                   </div>
                 </div>
@@ -190,6 +206,7 @@
                       rows="125"
                       class="input-control"
                       placeholder="Message"
+                      required
                     ></textarea>
                   </div>
                 </div>
@@ -199,6 +216,7 @@
                   <button
                     type="submit"
                     class="btn-1 outer-shadow hover-in-shadow"
+                   
                   >
                     Submit
                   </button>
@@ -216,7 +234,7 @@
 
               <div class="mLogo">
                 <span class="greyClass"><</span>
-                <span class="text">Aakash Garg</span>
+                <span class="text">Aakash Garg </span>
                 <span class="greyClass">/></span>
               </div>
 
@@ -225,9 +243,7 @@
                   <a href="../index.html"><i class="fas fa-home"></i> Home </a>
                 </li>
                 <li>
-                  <a href="about.html"
-                    ><i class="fas fa-user-alt"></i> About</a
-                  >
+                  <a href="about.html"><i class="fas fa-user-alt"></i> About</a>
                   <ul>
                     <li><a href="about.html#about-tabs">Skills</a></li>
                     <li><a href="about.html#about-tabs">Experience</a></li>
@@ -249,11 +265,11 @@
                     <i class="fas fa-envelope"></i> Contact</a
                   >
                 </li>
-                <li>
+                <!-- <li>
                   <a href="testimonials.html"
                     ><i class="fas fa-comments"></i>Testimonials</a
                   >
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
@@ -261,7 +277,6 @@
       </div>
     </section>
     <!-- -------------HEADER/HOME END----------------- -->
-    <!-- navlink a not working due to after on a  -->
     <nav>
       <ul>
         <li class="outer-shadow hover-in-shadow">
@@ -281,11 +296,11 @@
         <li class="outer-shadow hover-in-shadow active">
           <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
         </li>
-        <li class="outer-shadow hover-in-shadow">
+        <!-- <li class="outer-shadow hover-in-shadow">
           <a href="testimonials.html"
             ><i class="fas fa-comments"></i>Testimonials</a
           >
-        </li>
+        </li> -->
       </ul>
     </nav>
     <footer><p>Created by &copy; Aakash Garg</p></footer>
@@ -304,6 +319,20 @@
     </script>
     <script src="../particles.js"></script>
     <script src="../app.js"></script>
+    <!-- fireBAse -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase.js"></script>
+    <!-- email -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_AyROXX3EJNDBdyc7xMnK4");
+      })();
+    </script>
+    <!-- contact.js -->
+    <script src="../js/contact.js"></script>
     <!-- main js -->
     <script src="../js/main.js"></script>
     <!-- style switcher js -->
